@@ -44,8 +44,8 @@ Template.shopCheckoutDetails.rendered = function () {
 		},
 
 		orderBasket: function () {
-			Baskets.orderBasket(function () {
-				Router.go('confirmation', {_id: that.data.shop._id});
+			Baskets.orderBasket(function (basketId) {
+				Router.go('confirmation', {basketId: basketId});
 			});
 		}
 	}).bind(this);

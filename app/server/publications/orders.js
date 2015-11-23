@@ -3,8 +3,8 @@
  * @scope server
  */
 
-Meteor.publish('orders', function(shopSlug) {
-  return Orders.find({ shopId: Shops.findOne({ slug: shopSlug })._id });
+Meteor.publish('orders', function(doc) {
+  return Orders.find(doc);
 });
 
 Orders.allow({

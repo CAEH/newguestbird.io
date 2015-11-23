@@ -10,7 +10,7 @@ ShopConfirmationController = ShopBaseController.extend({
 	waitOn: function () {
 		return [
 			Meteor.subscribe('shops'),
-			Meteor.subscribe('orders')
+			Meteor.subscribe('orders', {basketId: this.params.basketId})
 		]
 	},
 

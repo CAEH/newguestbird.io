@@ -56,11 +56,6 @@ Shops.findItemsForShop = function (shopId) {
 	return Items.find().fetch()
 }
 
-// Shop.addSection = function (shopName) {
-// 	if (!_.isString(shopName)) {
-// 		return;
-// 	}
-
-// 	var shop = Shops.findOne();
-// 	Shops.update(shop._id, {$push: {sections: }})
-// }
+Shops.findShopBySlug = function (slug) {
+	return Shops.findOne({slug: slug});
+}

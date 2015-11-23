@@ -8,10 +8,15 @@ ShopEditController = DashboardShopsController.extend({
     'shopEditView': {to: 'content'}
   },
 	waitOn: function () {
+		var shop = Shops.findShopBySlug(this.params.shopSlug);
+		if (!shop) {
+			return;
+		}
+
 		return [
 			Meteor.subscribe('shops', Meteor.userId()),
 			Meteor.subscribe('items', this.params.shopSlug),
-			Meteor.subscribe('orders', this.params.shopSlug)
+			Meteor.subscribe('orders', {shopId: shop._id})
 		]
 	},
 	data: function () {

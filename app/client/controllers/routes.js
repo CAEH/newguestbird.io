@@ -30,7 +30,7 @@ RoutesMangaer = {
     	});
 
     	this.route('confirmation', {
-    		path: '/confirmation/:orderId',
+    		path: '/confirmation/:basketId',
     		controller: ShopConfirmationController
     	});
     });

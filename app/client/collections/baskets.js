@@ -160,10 +160,11 @@ Baskets.orderBasket = function (callback) {
 	if (!Baskets.validateBasket()) {
 		return;
 	}
-	Baskets.update(Baskets.findOne()._id, {$set: {isOrdered: true}}, {}, function (error) {
+	var basketId = Baskets.findOne()._id;
+	Baskets.update(basketId, {$set: {isOrdered: true}}, {}, function (error, ret) {
 		if (error) {
 			return;
 		}
-		callback();
+		callback(basketId);
 	});
 };
