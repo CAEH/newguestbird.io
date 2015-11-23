@@ -1,0 +1,10 @@
+{
+  "public": {
+    "environment": "development",
+    "rootDomain": "guestbird.de",
+    "basicAuth" : {
+      "user": "xxx",
+      "password": "xxx"
+    }
+  }
+}
