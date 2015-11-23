@@ -10,6 +10,17 @@ This app uses Meteor. If you never used meteor, it would be recommended to read 
 
 NOTE: settings.json is on gitignore for a reason. Never commit a settings file to a repo!
 
+The app using subdomains as routes, so what you'll need to do next is to enable wildcard subdomains on your local machine.
+You can use (this) [http://asciithoughts.com/posts/2014/02/23/setting-up-a-wildcard-dns-domain-on-mac-os-x/] tutorial.
+Then, change local hosts file to point `127.0.0.1` to `*.guestbird.dev`.
+
+After this is set, you can access the app at `dashboard.guestbird.dev:3000`.
+
+## How it works
+Users can set up a shop at dashboard on `dashboard.guestbird.dev:3000`
+When user sets a shop slug, it will be generated at `[SHOPNAME].guestbird.dev:3000`
+The `www` subdomain is saved for the promotional landing page, and ideally will be a static HTML website and not part of the Meteor app.
+
 ## How to deploy (to development server)
 To deploy to AWS servers we are using MeteorUP (mup). It is recommended to read a bit about how it works before deploying.
 https://github.com/arunoda/meteor-up
