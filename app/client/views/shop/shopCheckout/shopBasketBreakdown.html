@@ -1,0 +1,13 @@
+<template name="shopBasketBreakdown">
+
+	{{#each basketItems}}
+		<div class="breakdown-item">
+			{{> shopBasketBreakdownItem}}
+		</div>
+	{{/each}}
+
+	<div class="breakdown-total">
+		<div class="col-xs-8">{{_ "basket-breakdown.total"}}</div>
+		<div class="col-xs-4 text-right total-price">{{totalBasketPrice}} {{currencySymbol shop.shopCurrency}}</div>
+	</div>
+</template>

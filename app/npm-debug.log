@@ -1,0 +1,148 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'devtools-terminal' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.34
+4 verbose cache add [ 'devtools-terminal', null ]
+5 verbose cache add name=undefined spec="devtools-terminal" args=["devtools-terminal",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'devtools-terminal',
+6 verbose parsed url   path: 'devtools-terminal',
+6 verbose parsed url   href: 'devtools-terminal' }
+7 silly lockFile e21d316e-devtools-terminal devtools-terminal
+8 verbose lock devtools-terminal /Users/yonatan/.npm/e21d316e-devtools-terminal.lock
+9 silly lockFile e21d316e-devtools-terminal devtools-terminal
+10 silly lockFile e21d316e-devtools-terminal devtools-terminal
+11 verbose addNamed [ 'devtools-terminal', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 13bdf9d5-devtools-terminal devtools-terminal@
+14 verbose lock devtools-terminal@ /Users/yonatan/.npm/13bdf9d5-devtools-terminal.lock
+15 silly addNameRange { name: 'devtools-terminal', range: '*', hasData: false }
+16 verbose request where is /devtools-terminal
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id e80c45ffca59fd7c
+19 verbose url raw /devtools-terminal
+20 verbose url resolving [ 'https://registry.npmjs.org/', './devtools-terminal' ]
+21 verbose url resolved https://registry.npmjs.org/devtools-terminal
+22 verbose request where is https://registry.npmjs.org/devtools-terminal
+23 info trying registry request attempt 1 at 19:56:07
+24 http GET https://registry.npmjs.org/devtools-terminal
+25 http 200 https://registry.npmjs.org/devtools-terminal
+26 silly registry.get cb [ 200,
+26 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+26 silly registry.get     etag: '"EWZI5KHKEJWQ1KCANGZ7E2WI7"',
+26 silly registry.get     'content-type': 'application/json',
+26 silly registry.get     'cache-control': 'max-age=60',
+26 silly registry.get     'content-length': '6046',
+26 silly registry.get     'accept-ranges': 'bytes',
+26 silly registry.get     date: 'Mon, 21 Sep 2015 17:56:08 GMT',
+26 silly registry.get     via: '1.1 varnish',
+26 silly registry.get     age: '0',
+26 silly registry.get     connection: 'keep-alive',
+26 silly registry.get     'x-served-by': 'cache-fra1232-FRA',
+26 silly registry.get     'x-cache': 'MISS',
+26 silly registry.get     'x-cache-hits': '0',
+26 silly registry.get     'x-timer': 'S1442858167.822454,VS0,VE699',
+26 silly registry.get     vary: 'Accept' } ]
+27 silly addNameRange number 2 { name: 'devtools-terminal', range: '*', hasData: true }
+28 silly addNameRange versions [ 'devtools-terminal',
+28 silly addNameRange   [ '0.0.1', '0.1.0', '0.1.1', '0.1.2', '0.1.3' ] ]
+29 verbose addNamed [ 'devtools-terminal', '0.1.3' ]
+30 verbose addNamed [ '0.1.3', '0.1.3' ]
+31 silly lockFile cfb28654-devtools-terminal-0-1-3 devtools-terminal@0.1.3
+32 verbose lock devtools-terminal@0.1.3 /Users/yonatan/.npm/cfb28654-devtools-terminal-0-1-3.lock
+33 silly lockFile 31477aff-inal-devtools-terminal-0-1-3-tgz https://registry.npmjs.org/devtools-terminal/-/devtools-terminal-0.1.3.tgz
+34 verbose lock https://registry.npmjs.org/devtools-terminal/-/devtools-terminal-0.1.3.tgz /Users/yonatan/.npm/31477aff-inal-devtools-terminal-0-1-3-tgz.lock
+35 verbose addRemoteTarball [ 'https://registry.npmjs.org/devtools-terminal/-/devtools-terminal-0.1.3.tgz',
+35 verbose addRemoteTarball   'e5c9cdb7bf95dc5ce79d70e86479c7aeb9ee8f15' ]
+36 info retry fetch attempt 1 at 19:56:08
+37 verbose fetch to= /var/folders/vr/w3sbwxnx1jl7r2vzgx841_x40000gn/T/npm-6389--1KnBKun/registry.npmjs.org/devtools-terminal/-/devtools-terminal-0.1.3.tgz
+38 http GET https://registry.npmjs.org/devtools-terminal/-/devtools-terminal-0.1.3.tgz
+39 http 200 https://registry.npmjs.org/devtools-terminal/-/devtools-terminal-0.1.3.tgz
+40 silly lockFile 31477aff-inal-devtools-terminal-0-1-3-tgz https://registry.npmjs.org/devtools-terminal/-/devtools-terminal-0.1.3.tgz
+41 silly lockFile 31477aff-inal-devtools-terminal-0-1-3-tgz https://registry.npmjs.org/devtools-terminal/-/devtools-terminal-0.1.3.tgz
+42 silly lockFile cfb28654-devtools-terminal-0-1-3 devtools-terminal@0.1.3
+43 silly lockFile cfb28654-devtools-terminal-0-1-3 devtools-terminal@0.1.3
+44 silly lockFile 13bdf9d5-devtools-terminal devtools-terminal@
+45 silly lockFile 13bdf9d5-devtools-terminal devtools-terminal@
+46 silly resolved [ { name: 'devtools-terminal',
+46 silly resolved     preferGlobal: true,
+46 silly resolved     version: '0.1.3',
+46 silly resolved     author: { name: 'Dmitry Filimonov', email: 'me@dfilimonov.com' },
+46 silly resolved     description: 'Terminal in Chrome Devtools',
+46 silly resolved     contributors: [ [Object] ],
+46 silly resolved     bin: { 'devtools-terminal': './bin/devtools-terminal' },
+46 silly resolved     repository:
+46 silly resolved      { type: 'git',
+46 silly resolved        url: 'https://github.com/petethepig/devtools-terminal.git' },
+46 silly resolved     dependencies:
+46 silly resolved      { 'pty.js': '*',
+46 silly resolved        optimist: '*',
+46 silly resolved        'socket.io': '0.9.16',
+46 silly resolved        mkdirp: '*' },
+46 silly resolved     license: 'MIT',
+46 silly resolved     engines: { node: '>=0.8' },
+46 silly resolved     bugs: { url: 'https://github.com/petethepig/devtools-terminal/issues' },
+46 silly resolved     homepage: 'https://github.com/petethepig/devtools-terminal',
+46 silly resolved     _id: 'devtools-terminal@0.1.3',
+46 silly resolved     scripts: {},
+46 silly resolved     _shasum: 'e5c9cdb7bf95dc5ce79d70e86479c7aeb9ee8f15',
+46 silly resolved     _from: 'devtools-terminal@',
+46 silly resolved     _npmVersion: '2.1.4',
+46 silly resolved     _nodeVersion: '0.10.32',
+46 silly resolved     _npmUser: { name: 'petethepig', email: 'me@dfilimonov.com' },
+46 silly resolved     maintainers: [ [Object] ],
+46 silly resolved     dist:
+46 silly resolved      { shasum: 'e5c9cdb7bf95dc5ce79d70e86479c7aeb9ee8f15',
+46 silly resolved        tarball: 'http://registry.npmjs.org/devtools-terminal/-/devtools-terminal-0.1.3.tgz' },
+46 silly resolved     directories: {},
+46 silly resolved     _resolved: 'https://registry.npmjs.org/devtools-terminal/-/devtools-terminal-0.1.3.tgz' } ]
+47 info install devtools-terminal@0.1.3 into /usr/local/lib
+48 info installOne devtools-terminal@0.1.3
+49 verbose lib/node_modules/devtools-terminal unbuild
+50 verbose tar unpack /Users/yonatan/.npm/devtools-terminal/0.1.3/package.tgz
+51 silly lockFile e4dbf06e-b-node-modules-devtools-terminal tar:///usr/local/lib/node_modules/devtools-terminal
+52 verbose lock tar:///usr/local/lib/node_modules/devtools-terminal /Users/yonatan/.npm/e4dbf06e-b-node-modules-devtools-terminal.lock
+53 silly lockFile 504e4b5c-tools-terminal-0-1-3-package-tgz tar:///Users/yonatan/.npm/devtools-terminal/0.1.3/package.tgz
+54 verbose lock tar:///Users/yonatan/.npm/devtools-terminal/0.1.3/package.tgz /Users/yonatan/.npm/504e4b5c-tools-terminal-0-1-3-package-tgz.lock
+55 silly gunzTarPerm modes [ '755', '644' ]
+56 error Error: EACCES, mkdir '/usr/local/lib/node_modules/devtools-terminal'
+56 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/devtools-terminal']
+56 error   errno: 3,
+56 error   code: 'EACCES',
+56 error   path: '/usr/local/lib/node_modules/devtools-terminal',
+56 error   fstream_type: 'Directory',
+56 error   fstream_path: '/usr/local/lib/node_modules/devtools-terminal',
+56 error   fstream_class: 'DirWriter',
+56 error   fstream_stack:
+56 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+56 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+56 error      'Object.oncomplete (fs.js:108:15)' ] }
+57 error Please try running this command again as root/Administrator.
+58 error System Darwin 14.3.0
+59 error command "node" "/usr/local/bin/npm" "install" "-g" "devtools-terminal"
+60 error cwd /Users/yonatan/Projects/Roomer/repos/Roomer_app/Roomer
+61 error node -v v0.10.34
+62 error npm -v 1.4.28
+63 error path /usr/local/lib/node_modules/devtools-terminal
+64 error fstream_path /usr/local/lib/node_modules/devtools-terminal
+65 error fstream_type Directory
+66 error fstream_class DirWriter
+67 error code EACCES
+68 error errno 3
+69 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/devtools-terminal'
+70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+70 error fstream_stack Object.oncomplete (fs.js:108:15)
+71 verbose exit [ 3, true ]

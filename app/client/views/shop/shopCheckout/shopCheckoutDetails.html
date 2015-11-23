@@ -1,0 +1,62 @@
+<template name="shopCheckoutDetails">
+	<section class="checkout-identification {{hasErrorClass 'identification'}}">
+		<h4>Delivery</h4>
+		<div class="error-message">{{validationErrorMessage 'delivery-time'}}</div>
+
+		<p>Please deliver my item by</p>
+		<div class="row">
+			<div class="col-xs-6">
+				<button class="btn btn-primary full-width" data-bind="click: identifyBy('room-number')">Room Number</button>
+			</div>
+			<div class="col-xs-6">
+				<button class="btn btn-primary full-width" data-bind="click: identifyBy('booking-number')">Booking Number</button>
+			</div>
+		</div>
+
+		<div class="form-group checkout-form-group hide " data-content="room-number">
+			<p>
+				My room number is
+				<label for="room-number"></label>
+				<input type="text"
+				name="roomNumber"
+				placeholder= "e.g. 101"
+				id="room-number"
+				class="form-control"
+				data-bind="value: roomNumber, keyup: saveBasketDeliveryField">
+			</p>
+		</div>
+		<div class="form-group checkout-form-group hide" data-content="booking-number">
+			<p>
+				My booking number is
+				<input type="text"
+				name="bookingNumber"
+				placeholder= "e.g. TCR4839"
+				id="booking-number"
+				class="form-control"
+				data-bind="value: bookingNumber, keyup: saveBasketDeliveryField">
+			</p>
+		</div>
+	</section>
+
+	<section class="checkout-delivery-time {{hasErrorClass 'delivery-time'}}">
+		<h4>Delivery time</h4>
+		<div class="error-message">{{validationErrorMessage 'delivery-time'}}</div>
+		<div class="row">
+			<div class="col-xs-4"><button class="btn btn-primary full-width" data-bind="click: deliveryAt('now')">Now</button></div>
+			<div class="col-xs-4"><button class="btn btn-primary full-width" data-bind="click: deliveryAt('today')">Later Today</button></div>
+			<div class="col-xs-4"><button class="btn btn-primary full-width" data-bind="click: deliveryAt('date')">Another Day</button></div>
+		</div>
+
+		<div class="form-group checkout-form-group hide" data-content="today">
+			<p>Today at <input type="text" class="timepicker" style="width:35px" data-bind="onSet: onTimeSet"></p>
+		</div>
+
+		<div class="form-group checkout-form-group hide" data-content="date">
+			<p>On <input type="text" class="datepicker" style="width:65px"> at <input type="text" class="timepicker" style="width:66px"></p>
+		</div>
+	</section>
+
+	<section class="checkout-order">
+		<button class="btn btn-primary full-width" data-bind="click: orderBasket">Order</button>
+	</section>
+</template>

@@ -1,0 +1,54 @@
+@import "mixins.scss";
+@import "bootstrap/variables";
+
+.dashboard {
+  .dashboard-header {
+    padding-bottom: 20px;
+    padding-top: 10px;
+    .home {
+      img {
+        width: 45px;
+      }
+    }
+    .menu-item {
+      a {
+        color: $gray;
+        font-size: 1.3em;
+        margin-left: 25px;
+        &:hover {
+          color: $gray-darker;
+        }
+    }
+      &.active a {
+        color: $brand-primary;
+      }
+    }
+  }
+  .legend-row {
+    font-weight: 700;
+  }
+  .orders-table {
+    .legend-row {
+        background: $gray-lighter;
+    }
+    .order-table-item, .legend-row {
+      padding: 15px 10px;
+      border-bottom: 1px solid $gray-light;
+    }
+    .order-table-item {
+      &:hover {
+        background: lighten($brand-primary, 40%);
+        cursor: pointer;
+      }
+      .more-info {
+        margin-top: 10px;
+        border-top: $gray-light 1px solid;
+        padding-top: 10px;
+      }
+    }
+  }
+}
+
+input[type="file"] {
+  visibility: hidden;
+}

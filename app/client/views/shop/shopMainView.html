@@ -1,0 +1,23 @@
+<template name="shopMainView">
+	<div class="shop-content {{basketOpenClass}} container">
+		<div class="row">
+			<div class="col-sm-8">
+				{{#each shopSections}}
+					<div class='shop-section-container'>
+						<h3 class="shop-section-title">
+							{{name}}
+						</h3>
+						{{#each items}}
+							{{> shopItemView}}
+						{{/each}}
+					</div>
+				{{/each}}
+			</div>
+			<div class="col-sm-4">
+				<div class="shop-basket {{hideBasketClass}}">
+					{{> shopBasketView}}
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

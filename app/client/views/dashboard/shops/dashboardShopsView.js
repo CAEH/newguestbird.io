@@ -1,0 +1,3 @@
+Template.dashboardShopsView.rendered = function () {
+
+};

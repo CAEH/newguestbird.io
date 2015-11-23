@@ -1,0 +1,20 @@
+<template name="shopBasketBreakdownItem">
+	<div class="row">
+		<div class="col-xs-8">
+			<span class="breakdown-item-count-controllers">
+				<span class="count-controller" data-bind="click: addItemCount">
+					<i class="ion-plus-round"></i>
+				</span>
+				<span class="count-controller" data-bind="click: removeItemCount">
+					<i class="ion-minus-round"></i>
+				</span>
+			</span>
+			<span class="breakdown-item-count">{{count}}</span>
+			<span class="breakdown-item-name">{{name}}</span>
+		</div>
+		<div class="col-xs-4 text-right">
+			<span class="breakdown-item-price">{{price}} {{currencySymbol ../shop.shopCurrency}}</span>
+			{{shop}}
+		</div>
+	</div>
+</template>

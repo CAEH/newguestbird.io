@@ -1,0 +1,24 @@
+<template name="shopEditOrdersView">
+  <div class="orders-table">
+    <div class="row legend-row order-row">
+      <div class="col-xs-3">
+        Delivery Time
+      </div>
+      <div class="col-xs-3">
+        Delivery
+      </div>
+      <div class="col-xs-2">
+        Items
+      </div>
+      <div class="col-xs-2">
+        Total Price
+      </div>
+      <div class="col-xs-2">
+        Status
+      </div>
+    </div>
+  {{#each orders}}
+    {{> shopEditOrderItemView}}
+  {{/each}}
+  </div>
+</template>

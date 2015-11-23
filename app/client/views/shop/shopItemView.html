@@ -1,0 +1,26 @@
+<template name="shopItemView">
+	<div class="shop-item" data-bind="click: addToBasket">
+		<div class="row vertical-align">
+			<div class="col-xs-8">
+				<h4 class="item-title">
+					{{name}}
+				</h4>
+				<p class="item-description">
+					{{description}}
+				</p>
+			</div>
+			<div class="col-xs-4">
+				<div class="row">
+					<div class="col-xs-6 text-center">
+						<div class="price">
+							{{price}} €
+						</div>
+					</div>
+					<div class="col-xs-6 text-center">
+						<i class="add-to-icon ion-ios-plus-outline"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

@@ -1,0 +1,6 @@
+{
+  "public": {
+    "environment": "development",
+    "rootDomain": "guestbird.dev:3000"
+  }
+}

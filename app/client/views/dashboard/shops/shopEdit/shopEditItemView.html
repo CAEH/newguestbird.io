@@ -1,0 +1,54 @@
+<template name="shopEditItemView">
+	<div>
+	<h3>{{name}}</h3>
+		<div class="form-group">
+			<label for="itemName">{{_ "shop-edit.item.item-name"}}</label>
+			<input
+			type="text"
+			class="form-control item-field"
+			id="itemName"
+			placeholder="{{_ 'shop-edit.item.item-name'}}"
+			name="name"
+			data-bind="value: name, keyup: saveItemField">
+		</div>
+
+		<div class="form-group">
+			<label for="itemDescription">{{_ "shop-edit.item.item-description"}}</label>
+			<input
+			type="text"
+			class="form-control item-field"
+			id="itemDescription"
+			placeholder="{{_ 'shop-edit.item.item-description'}}"
+			name="description"
+			data-bind="value: description, keyup: saveItemField">
+		</div>
+
+		<div class="form-group">
+			<label for="itemSection">{{_ "shop-edit.item.item-section"}}</label>
+			<input
+			type="text"
+			class="form-control item-field"
+			id="itemSection"
+			placeholder="{{_ 'shop-edit.item.item-section'}}"
+			name="shopSection"
+			data-bind="value: shopSection, keyup: saveItemField">
+		</div>
+
+		<div class="row">
+			<div class="col-xs-8">
+				<div class="form-group">
+					<label for="itemDescription">{{_ "shop-edit.item.item-price"}}</label>
+					<input
+					type="number"
+					class="form-control item-field"
+					id="itemDescription"
+					placeholder="{{_ 'shop-edit.item.item-price'}}"
+					name="price"
+					data-bind="value: price, keyup: saveItemField">
+				</div>
+			</div>
+			<div class="col-xs-4">{{../shop.shopCurrency}}</div>
+		</div>
+
+	</div>
+</template>

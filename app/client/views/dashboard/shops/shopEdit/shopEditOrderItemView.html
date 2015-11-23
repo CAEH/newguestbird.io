@@ -1,0 +1,35 @@
+<template name="shopEditOrderItemView">
+  <div class="order-table-item">
+    <div class="row order-row" data-bind="click: toggleInfo">
+      <div class="col-xs-3">
+        {{delivery.deliveryDate}} {{delivery.deliveryTime}}
+      </div>
+      <div class="col-xs-3">
+        {{#if delivery.roomNumber}}Room number: {{delivery.roomNumber}} {{/if}}
+        {{#if delivery.bookingNumber}}Booking Number: {{delivery.bookingNumber}} {{/if}}
+      </div>
+      <div class="col-xs-2">
+        {{items.length}}
+      </div>
+      <div class="col-xs-2">
+        {{totalPrice}}
+      </div>
+      <div class="col-xs-2">
+        {{status}}
+      </div>
+    </div>
+    <div class="more-info hide">
+      <div class="order-items">
+        {{#each items}}
+        <div class="order-item">
+          {{name}} {{price}}
+        </div>
+        {{/each}}
+      </div>
+      <div class="order-actions text-right">
+        <button class="btn btn-primary" data-bind="click: confirmOrder">Confirm Order</button>
+        <button class="btn btn-primary" data-bind="click: cancelOrder">Cancel Order</button>
+      </div>
+    </div>
+  </div>
+</template>

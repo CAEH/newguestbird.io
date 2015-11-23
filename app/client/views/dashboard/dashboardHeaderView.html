@@ -1,0 +1,26 @@
+<template name="dashboardHeaderView">
+  <div class="row">
+    <div class="col-sm-8">
+      <span class="home">
+        <a href="/"><img src="/images/brand/penguin.png"></a>
+      </span>
+      <span class="menu-item {{setActiveClassIf content 'shops'}}">
+        <a href="/shops">Shops</a>
+      </span>
+      <span class="menu-item">
+        <a href="/account">Account</a>
+      </span>
+      <span class="menu-item">
+        <a href="/billing">Billing</a>
+      </span>
+      <span class="menu-item">
+        <a href="/support">Support</a>
+      </span>
+    </div>
+    <div class="col-sm-4 text-right">
+      <span class="menu-item">
+        <a href="/logout">Logout</a>
+      </span>
+    </div>
+  </div>
+</template>

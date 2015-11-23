@@ -1,0 +1,47 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+insecure
+iron:router
+fourseven:scss
+natestrauser:animate-css
+iamkevingreen:meteor-pickadate
+peerlibrary:blaze-components
+underscore
+wenape:accounts-guest
+accounts-base
+tap:i18n
+manuel:viewmodel
+jeremy:selectize
+tomi:upload-server
+mrt:imagemagick
+meteoric:ionicons-sass
+momentjs:moment
+msavin:mongol
+accounts-google
+accounts-password
+jabbslad:basic-auth
+multiply:iron-router-progress
+cfs:standard-packages
+cfs:gridfs
+cfs:filesystem
+dbarrett:dropzonejs
+standard-minifiers
+meteor-base
+mobile-experience
+mongo
+blaze-html-templates
+session
+jquery
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check
+chfritz:filedrop
+pagebakers:ionicons

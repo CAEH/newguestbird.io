@@ -1,0 +1,13 @@
+<template name="dashboardView">
+  <div class="dashboard">
+    <div class="dashboard-header container">
+      {{> dashboardHeaderView}}
+    </div>
+    <div class="dashboard-alert">
+      {{ > dashboardAlertView}}
+    </div>
+    <div class="dashboard-content container">
+      {{> yield region="content"}}
+    </div>
+  </div>
+</template>

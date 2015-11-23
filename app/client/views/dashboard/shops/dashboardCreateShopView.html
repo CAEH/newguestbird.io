@@ -1,0 +1,32 @@
+<template name="dashboardCreateShopView">
+  <div class="container create-shop-container max-width-x-small">
+
+    <h1>Create a shop</h1>
+    <div class="form-group">
+  		<label for="shopName">{{_ "shop-edit.shop-name"}}</label>
+  		<input
+  		type="text"
+  		class="form-control"
+  		id="shopName"
+  		placeholder="{{_ 'shop-edit.shop-name'}}"
+  		name="name">
+  	</div>
+
+    <div class="form-group">
+  		<label for="shopSlug">{{_ "shop-edit.shop-slug"}}</label>
+  		<div class="row">
+  			<div class="col-xs-4">
+  				<input
+  				type="text"
+  				class="form-control"
+  				id="shopSlug"
+  				placeholder="{{_ 'shop-edit.shop-slug'}}"
+  				name="slug">
+  			</div>
+  			<div class="col-xs-8">.roomer.com</div>
+  		</div>
+  	</div>
+
+    <button class="btn btn-primary btn-block" data-bind="click: createShop">Create shop</button>
+  </div>
+</template>

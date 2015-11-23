@@ -1,0 +1,7 @@
+<template name="shopEditItemsView">
+	{{#each items}}
+		{{> shopEditItemView}}
+	{{/each}}
+	<button class="btn btn-primary"
+	data-bind="click: addItem">{{_ 'shop-edit.add-item'}}</button>
+</template>

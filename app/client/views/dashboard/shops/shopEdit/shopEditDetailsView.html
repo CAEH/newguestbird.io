@@ -1,0 +1,77 @@
+<template name="shopEditDetailsView">
+
+	<div class="form-group">
+		<label for="shopName">{{_ "shop-edit.shop-name"}}</label>
+		<input
+		type="text"
+		class="form-control"
+		id="shopName"
+		placeholder="{{_ 'shop-edit.shop-name'}}"
+		name="name"
+		data-bind="value: name, keyup: saveShopField">
+	</div>
+	<div class="form-group">
+		<label for="shopSlug">{{_ "shop-edit.shop-slug"}}</label>
+		<div class="row">
+			<div class="col-xs-4">
+				<input
+				type="text"
+				class="form-control"
+				id="shopSlug"
+				placeholder="{{_ 'shop-edit.shop-slug'}}"
+				name="slug"
+				data-bind="value: slug, keyup: saveShopField">
+			</div>
+			<div class="col-xs-8">.roomer.com</div>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="shopDescription">{{_ 'shop-edit.shop-description'}}</label>
+		<input
+		type="text"
+		class="form-control"
+		id="shopDescription"
+		placeholder="{{_ 'shop-edit.shop-description'}}"
+		name="description"
+		data-bind= "value: description, keyup: saveShopField">
+	</div>
+	<div class="form-group">
+		<label for="shopCurrency">{{_ 'shop-edit.shop-currency'}}</label>
+		<select
+		class="form-control"
+		id="shopCurrency"
+		placeholder="{{_ 'shop-edit.shop-currency'}}"
+		name="shopCurrency"
+		data-bind= "value: shopCurrency, change: saveShopField, options: availableCurrencies">
+		</select>
+	</div>
+	<div class="form-group" name="image">
+		<label for="shop-image-file">Shop Cover Image</label>
+		<input type="file" data-bind="change: saveImage" id="shop-image-file">
+		<div>
+
+		{{#filedrop dropHandlers}}
+		<div class="file-drop {{#if filedrop_over}} file-over {{#if filedrop_over}} file-window {{/if}} {{/if}}" onclick="$('#shop-image-file').click()">
+			<div class="file-drop-background" style="background-image: url('{{uploadedImgPath ../shop.images}}')"></div>
+			<div class="file-drop-label">
+				  Drop Files Here
+			</div>
+		</div>
+		{{/filedrop}}
+
+		</div>
+	</div>
+	<div class="form-group" name="logo">
+		<label for="shop-logo-file">Shop Logo</label>
+		<input type="file" name="logo" data-bind="change: saveImage" id="shop-logo-file">
+		{{#filedrop dropHandlers}}
+		<div class="file-drop file-drop-logo {{#if filedrop_over}} file-over {{#if filedrop_over}} file-window {{/if}} {{/if}}" onclick="$('#shop-logo-file').click()">
+			<div class="file-drop-background" style="background-image: url('{{uploadedImgPath ../shop.logo}}')"></div>
+			<div class="file-drop-label">
+				  Drop Files Here
+			</div>
+		</div>
+		{{/filedrop}}
+	</div>
+</template>
