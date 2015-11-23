@@ -21,3 +21,5 @@ https://github.com/arunoda/meteor-up
 - Set mup file `cp mup-sample.json mup.json`.
 - Change relevant settings in mup file
 - `mup deploy`
+
+NOTE: Never, ever, ever, ever, ever commit `mup.json` to the repo.
