@@ -11,7 +11,7 @@ AccessManager = {
     return Shops.find({slug: this.getSubdomain(session)});
   },
   getItemsBySubdomain: function (session) {
-    return Items.find({slug: this.getShopBySubdomain(session)._id});
+    return Items.find({shopId: this.getShopBySubdomain(session).fetch()[0]._id});
   },
   isDashboard: function (session) {
     return this.getSubdomain(session) === 'dashboard';
