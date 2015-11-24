@@ -10,6 +10,12 @@ body, html {
 body {
 	overflow-x: hidden;
 }
+.green {
+	color: $green;
+}
+.red {
+	color: $red;
+}
 .transitioner {
 	overflow: initial;
 }

@@ -1,8 +1,25 @@
 <template name="shopConfirmationView">
   <div class="shop-confirmation container">
     <h1>Thanks for your order!</h1>
+    <div class="order-status">
+      Order status:
+      {{#if equals order.status "confirmed"}}
+        <span class="green">Confirmed</span>
+      {{/if}}
+      {{#if equals order.status "canceled"}}
+        <span class="red">Cancelled</span>
+      {{/if}}
+      {{#unless order.status}}
+        Waiting for confirmation
+      {{/unless}}
+    </div>
     <p>
+      {{#if equals order.status "canceled"}}
+      Your order has been cancelled.
+      {{else}}
       Your order has been sent, we are doing our best to prepare it and deliver it to you.
+      {{/if}}
     </p>
+
   </div>
 </template>
