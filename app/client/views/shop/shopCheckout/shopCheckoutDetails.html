@@ -20,10 +20,10 @@
 		</div>
 
 		<div class="form-group" data-content="room-number">
-				<label for="room-number">Room Number</label>
+				<label for="room-number">Room Number <br> <small>If you don't know your room number yet, leave this field empty</small></label>
 				<input type="text"
 				name="roomNumber"
-				placeholder= "e.g. 101"
+				placeholder= "Type in your room number"
 				id="room-number"
 				class="form-control"
 				data-bind="value: roomNumber, keyup: saveBasketDeliveryField">
@@ -31,9 +31,9 @@
 
 		<h4>Delivery time</h4>
 		<div class="form-group">
-			<input class="textual-input datepicker" data-bind="value: deliveryDate">
+			<span class="textual-input datepicker">{{basket.delivery.deliveryDate}}</span>
 			at
-			<input class="textual-input timepicker" data-bind="value: deliveryTime">
+			<span class="textual-input timepicker">{{basket.delivery.deliveryTime}}</span>
 		</div>
 
 		<section class="checkout-order">

@@ -219,3 +219,10 @@
 		margin-bottom: 5px;
 	}
 }
+
+.textual-input {
+	border: none;
+	border-bottom: 1px dashed $red;
+	color: $red;
+	padding: 0 5px;
+}
