@@ -5,6 +5,7 @@ Template.shopCheckoutDetails.rendered = function () {
 		roomNumber: basket.delivery.roomNumber,
 		bookingNumber: basket.delivery.bookingNumber,
 		deliveryTime: basket.delivery.deliveryTime,
+		deliveryDate: basket.delivery.deliveryDate,
 
 		identifyBy: function (arg) {
 			$('.checkout-identification .checkout-form-group').addClass('hide');
@@ -57,7 +58,7 @@ Template.shopCheckoutDetails.rendered = function () {
 	});
 
 	$('.datepicker').pickadate({
-		onSet: function (evt, a) {
+		onSet: function (evt) {
 			Baskets.update(Baskets.findOne()._id, { $set: {'delivery.deliveryDate': this.get('select', 'dd.mm.yyyy')} });
 		}
 	});
@@ -77,5 +78,12 @@ Template.shopCheckoutDetails.helpers({
 			return;
 		}
 		return error.message;
+	}
+});
+
+Template.shopCheckoutDetails.events({
+	'submit .checkout-form': function (evt) {
+		evt.preventDefault();
+		console.log('submit!')
 	}
 });
