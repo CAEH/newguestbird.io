@@ -1,11 +1,9 @@
 Template.shopCheckoutDetails.rendered = function () {
 	var basket = Baskets.findOne();
-	var that = this;
+
 	var viewModel = new ViewModel({
 		roomNumber: basket.delivery.roomNumber,
-		bookingNumber: basket.delivery.bookingNumber,
-		deliveryTime: basket.delivery.deliveryTime,
-		deliveryDate: basket.delivery.deliveryDate,
+		email: basket.email,
 
 		identifyBy: function (arg) {
 			$('.checkout-identification .checkout-form-group').addClass('hide');

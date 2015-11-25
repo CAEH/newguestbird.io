@@ -19,7 +19,7 @@ Baskets.createBasket = function(options) {
 		curreny: 'shopCurrency',
 		items: [],
 		delivery: {
-			deliveryDate: moment('MM.dd.YYYY'),
+			deliveryDate: moment('DD.MM.YYYY'),
 			deliveryTime: 'now'
 		}
 	};
