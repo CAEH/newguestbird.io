@@ -130,7 +130,7 @@ Baskets.getTotalPrice = function () {
  * @param {Function} errorCallback
  * @return {Bool}
  */
-Baskets.validateBasket = function () {
+Baskets.validateBasket = function (callback) {
 	if (!Baskets.hasBasket()) {
 		return;
 	}
@@ -138,11 +138,11 @@ Baskets.validateBasket = function () {
 		if (error) {
 			console.log(error);
 			Session.set('Baskets.validationError', error.reason);
+			callback(false)
 			return;
 		}
-		Session.set('Baskets.isValid', result);
+		callback(true)
 	});
-	return Session.get('Baskets.isValid');
 };
 
 /**
@@ -160,14 +160,17 @@ Baskets.findBasketFieldError = function (field) {
 };
 
 Baskets.orderBasket = function (callback) {
-	if (!Baskets.validateBasket()) {
-		return;
-	}
-	var basketId = Baskets.findOne()._id;
-	Baskets.update(basketId, {$set: {isOrdered: true}}, {}, function (error, ret) {
-		if (error) {
+	return Baskets.validateBasket(function(isValid) {
+		if (!isValid) {
 			return;
 		}
-		callback(basketId);
+		var basketId = Baskets.findOne()._id;
+		Baskets.update(basketId, {$set: {isOrdered: true}}, {}, function (error, ret) {
+			if (error) {
+				return;
+			}
+			callback(basketId);
+		});
 	});
+
 };

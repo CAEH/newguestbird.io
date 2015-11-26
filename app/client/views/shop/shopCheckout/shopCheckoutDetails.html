@@ -4,7 +4,7 @@
 			<h4>Your information</h4>
 		</div>
 		<div>
-			<div class="form-group">
+			<div class="form-group {{hasErrorClass 'fullName'}}">
 				<label for="checkout-name" class="{{#if basket.delivery.fullName}}active{{/if}}">Full Name</label>
 				<input class="form-control"
 				name="fullName"
@@ -13,7 +13,7 @@
 				data-bind="value: email, keyup: saveBasketDeliveryField">
 			</div>
 
-			<div class="form-group">
+			<div class="form-group {{hasErrorClass 'email'}}">
 				<label for="checkout-email" class="{{#if basket.delivery.email}}active{{/if}}">Email address</label>
 				<input class="form-control"
 				name="email"
@@ -23,7 +23,7 @@
 				data-bind="value: fullName, keyup: saveBasketDeliveryField">
 			</div>
 
-			<div class="form-group" data-content="room-number">
+			<div class="form-group {{hasErrorClass 'roomNumber'}}" data-content="room-number">
 					<label for="room-number" class="{{#if basket.delivery.roomNumber}}active{{/if}}">
 						Room Number
 						<!-- <br> <small>If you don't know your room number yet, leave this field empty</small> -->

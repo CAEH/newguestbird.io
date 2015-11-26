@@ -60,25 +60,17 @@ Template.shopCheckoutDetails.rendered = function () {
 
 Template.shopCheckoutDetails.helpers({
 	hasErrorClass: function (field) {
+		console.log(field)
 		if (!Baskets.findBasketFieldError(field)) {
 			return;
 		}
 		return 'has-error';
-	},
-
-	validationErrorMessage: function (field) {
-		var error = Baskets.findBasketFieldError(field);
-		if (!_.isObject(error)) {
-			return;
-		}
-		return error.message;
 	}
 });
 
 Template.shopCheckoutDetails.events({
 	'submit .checkout-form': function (evt) {
 		evt.preventDefault();
-		console.log('submit!')
 		Baskets.orderBasket(function (basketId) {
 			Router.go('confirmation', {basketId: basketId});
 		});
