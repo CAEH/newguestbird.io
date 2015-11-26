@@ -35,6 +35,7 @@ cfs:upload-http@0.0.20
 cfs:worker@0.1.4
 check@1.1.0
 chfritz:filedrop@0.0.5
+chuangbo:cookie@1.1.0
 coffeescript@1.0.11
 dbarrett:dropzonejs@4.0.2
 dburles:mongo-collection-instances@0.3.4

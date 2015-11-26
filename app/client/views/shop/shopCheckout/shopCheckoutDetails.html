@@ -42,13 +42,13 @@
 			</div>
 			<div class="form-group">
 				<span class="textual-input datepicker">{{parseDate basket.delivery.deliveryDate}}</span>
-				at
+				{{#if equals basket.delivery.deliveryTime 'now'}} and {{else}} at {{/if}}
 				<span class="textual-input timepicker">{{basket.delivery.deliveryTime}}</span>
 			</div>
 		</div>
 
 		<section class="checkout-order">
-			<button class="btn btn-primary full-width" data-bind="click: orderBasket">Order</button>
+			<button class="btn btn-primary full-width" type='submit'>Order</button>
 		</section>
 	</form>
 </template>

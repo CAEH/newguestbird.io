@@ -41,12 +41,6 @@ Template.shopCheckoutDetails.rendered = function () {
 		  	doc[attr] = value;
 		  	console.log(doc);
 		  	Baskets.update(Baskets.findOne()._id, { $set: doc });
-		},
-
-		orderBasket: function () {
-			Baskets.orderBasket(function (basketId) {
-				Router.go('confirmation', {basketId: basketId});
-			});
 		}
 	}).bind(this);
 
@@ -85,5 +79,8 @@ Template.shopCheckoutDetails.events({
 	'submit .checkout-form': function (evt) {
 		evt.preventDefault();
 		console.log('submit!')
+		Baskets.orderBasket(function (basketId) {
+			Router.go('confirmation', {basketId: basketId});
+		});
 	}
 });

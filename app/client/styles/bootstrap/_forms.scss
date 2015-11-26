@@ -37,6 +37,7 @@ label {
 }
 
 
+
 // Normalize form controls
 //
 // While most of our form styles require extra classes, some basic normalization
@@ -125,9 +126,10 @@ output {
   border: 1px solid $input-border;
   border-radius: $input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
   @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+  outline: none !important;
 
   // Customize the `:focus` state to imitate native WebKit styles.
-  @include form-control-focus;
+  // @include form-control-focus;
 
   // Placeholder
   @include placeholder;
