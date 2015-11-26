@@ -45,7 +45,9 @@
 			h1 {
 				color: $gray-lighter;
 				margin-bottom: 0;
-				font-family: $font-family-serif;
+				margin-top: 10px;
+				margin-bottom: 5px;
+
 			}
 			.shop-description {
 				color: $gray-lighter;
@@ -129,38 +131,28 @@
 		@media #{$small} {
 			position: fixed;
 			bottom: 0;
+			left: 0;
+			padding: 0.5em;
 			background: $gray-lighter;
 			width: 100%;
 			border-top: 1px solid $gray-dark;
 			box-shadow: 0px 0px 0px 2px rgba($gray-dark, 0.5);
 		}
-		@media #{$not-small} {
-			margin-top: 25px;
-			border: 1px solid $brand-primary;
-			border-radius: 2px;
-		}
+
 
 		.checkout-button {
 			width: 100%;
 		}
 		.basket-content {
-			padding-top: 1.5em;
 			padding-bottom: 0.3em;
 		}
 		.basket-title {
 			margin: 0 auto;
-			text-align: center;
-			background-color: $gray-lighter;
 			color: $brand-primary;
-			width: 130px;
-			padding: 5px;
-			border-radius: 39px;
-			font-size: 16px;
-			position: absolute;
-			left: 50%;
-			top: -14px;
-			margin-left: -65px;
-			border: 1px solid $brand-primary;
+			font-size: 1.2em;
+			@media #{$small} {
+				display: none;
+			}
 		}
 		.basket-sentence {
 			font-size: 0.9em;
