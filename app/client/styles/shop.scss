@@ -171,12 +171,12 @@
 			padding: 1em;
 			background: $gray-lighter;
 			border-bottom: 1px solid $gray-light;
+			&:first-child {
+				border-top: 1px solid $gray-light;
+			}
 			@media #{$not-small} {
 				border-left: 1px solid $gray-light;
     		border-right: 1px solid $gray-light;
-			}
-			&:first-child {
-				border-top: 1px solid $gray-light;
 			}
 		}
 		.breakdown-item-price {
@@ -223,7 +223,7 @@
 }
 
 .checkout-details {
-	margin-top: 40px;
+	margin-top: 10px;
 }
 
 .shop-confirmation {
