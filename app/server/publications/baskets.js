@@ -136,11 +136,9 @@ Baskets.getTotalPrice = function (basketId) {
 	if (!Baskets.hasItems(basketId)) {
 		return [];
 	}
-
-	var price = _.reduce(_.map(Baskets.findOne(basketId).items, function(item) {
-		return item.price;
-	}), function(memo, num) {
-		return memo + num;
+  console.log(basketId)
+	var price = _.map(Baskets.findOne(basketId).items, function(item) {
+		return item.price * item.count;
 	});
 
 	return Math.round( price * 100 ) / 100;

@@ -120,6 +120,7 @@ Baskets.getTotalPrice = function () {
 			console.log(error);
 			return;
 		}
+		console.log(result)
 		Session.set('Baskets.basketTotalPrice', result);
 	});
 	return Session.get('Baskets.basketTotalPrice');
