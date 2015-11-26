@@ -3,9 +3,9 @@ Template.shopCheckoutDetails.rendered = function () {
 
 	var viewModel = new ViewModel({
 		roomNumber: basket.delivery.roomNumber,
-		email: basket.email,
-		fullName: basket.fullName,
-		
+		email: basket.delivery.email,
+		fullName: basket.delivery.fullName,
+
 		identifyBy: function (arg) {
 			$('.checkout-identification .checkout-form-group').addClass('hide');
 			$('.checkout-identification .checkout-form-group[data-content="' + arg + '"]').removeClass('hide');
