@@ -39,7 +39,6 @@ Template.shopCheckoutDetails.rendered = function () {
 		  	var doc = {};
 
 		  	doc[attr] = value;
-		  	console.log(doc);
 		  	Baskets.update(Baskets.findOne()._id, { $set: doc });
 		}
 	}).bind(this);
@@ -60,7 +59,6 @@ Template.shopCheckoutDetails.rendered = function () {
 
 Template.shopCheckoutDetails.helpers({
 	hasErrorClass: function (field) {
-		console.log(field)
 		if (!Baskets.findBasketFieldError(field)) {
 			return;
 		}
