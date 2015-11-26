@@ -55,8 +55,8 @@ button:hover
 .full-width {
 	width: 100%;
 }
-.not-found {
-	.not-found-cover {
+.not-found, .loading {
+	.not-found-cover, .loading-cover {
 		background: url('/images/common/notfound.jpg');
 		background-position: center center;
 		background-size: cover;
@@ -65,6 +65,9 @@ button:hover
 		height: 100%;
 		@include opacity(0.3);
 		z-index: -1;
+	}
+	.loading-cover {
+		background-image: url('/images/common/loading.jpg');
 	}
 	h1 {
 		top: 50%;

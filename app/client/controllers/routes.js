@@ -6,6 +6,7 @@
 Router.configure({
   layoutTemplate: 'layout',
   notFoundTemplate: 'notFoundView',
+  loadingTemplate: 'loading',
   progress: true,
   progressSpinner: false
 });
@@ -33,6 +34,7 @@ RoutesMangaer = {
     		path: '/confirmation/:basketId',
     		controller: ShopConfirmationController
     	});
+
     });
   },
 

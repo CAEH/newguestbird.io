@@ -37,12 +37,12 @@
 		position: absolute;
 		top: 13px;
 		font-weight: 100;
-		right: -7px;
+		right: 0;
 		padding: 0px 12px;
 		@include opacity(0);
 		@include transition();
 		&.active {
-			right: 0px;
+			right: -5px;
 			@include opacity(100);
 		}
 	}
