@@ -5,8 +5,7 @@
         {{delivery.deliveryDate}} {{delivery.deliveryTime}}
       </div>
       <div class="col-xs-3">
-        {{#if delivery.roomNumber}}Room number: {{delivery.roomNumber}} {{/if}}
-        {{#if delivery.bookingNumber}}Booking Number: {{delivery.bookingNumber}} {{/if}}
+        {{delivery.fullName}}
       </div>
       <div class="col-xs-2">
         {{items.length}}
@@ -19,12 +18,22 @@
       </div>
     </div>
     <div class="more-info hide">
-      <div class="order-items">
-        {{#each items}}
-        <div class="order-item">
-          {{name}} {{price}}
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="order-items">
+            <h4>Items</h4>
+            {{#each items}}
+            <div class="order-item">
+              {{name}} {{price}}
+            </div>
+            {{/each}}
+          </div>
         </div>
-        {{/each}}
+        <div class="col-sm-4">
+            <h4>Orderer details</h4>
+            Name: {{delivery.fullName}}<br>
+            Email: {{delivery.email}}
+        </div>
       </div>
       <div class="order-actions text-right">
         <button class="btn btn-primary" data-bind="click: confirmOrder">Confirm Order</button>

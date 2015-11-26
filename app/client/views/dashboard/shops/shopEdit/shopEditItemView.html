@@ -1,6 +1,7 @@
 <template name="shopEditItemView">
-	<div>
-	<h3>{{name}}</h3>
+	<div class="shop-edit-item">
+		<span class="remove-item-btn" data-bind="click: removeItem"><i class="ion-ios-close-outline"></i></span>
+		<h3>{{#if name}}{{name}}{{else}}New item{{/if}}</h3>
 		<div class="form-group">
 			<label for="itemName">{{_ "shop-edit.item.item-name"}}</label>
 			<input

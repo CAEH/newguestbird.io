@@ -21,5 +21,8 @@ Template.shopEditItemView.rendered = function () {
 		  	console.log(doc);
 		  	Items.update(item._id, { $set: doc })
 		},
+		removeItem: function () {
+			Items.remove(item._id);
+		}
 	}).bind(this);
 };
