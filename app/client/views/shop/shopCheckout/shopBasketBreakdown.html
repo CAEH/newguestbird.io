@@ -7,7 +7,9 @@
 	{{/each}}
 
 	<div class="breakdown-total">
-		<div class="col-xs-8">{{_ "basket-breakdown.total"}}</div>
-		<div class="col-xs-4 text-right total-price">{{totalBasketPrice}} {{currencySymbol shop.shopCurrency}}</div>
+		<div class="row">
+			<div class="col-xs-8">{{_ "basket-breakdown.total"}}</div>
+			<div class="col-xs-4 text-right total-price">{{totalBasketPrice}} {{currencySymbol shop.shopCurrency}}</div>
+		</div>
 	</div>
 </template>

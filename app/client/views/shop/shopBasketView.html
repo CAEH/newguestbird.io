@@ -1,5 +1,5 @@
 <template name="shopBasketView">
-	<div class="container basket-content">
+	<div class="basket-content">
 		<h2 class="basket-title">Your Basket</h2>
 		{{#if isSmall}}
 		<p class="basket-sentence">
@@ -10,6 +10,8 @@
 			{{> shopBasketBreakdown}}
 		</div>
 		{{/if}}
-		<a href="checkout"><button class="btn btn-primary checkout-button">{{_ "shop-basket.checkout-button"}}</button></a>
+		<div class="container">
+			<a href="checkout"><button class="btn btn-primary checkout-button">{{_ "shop-basket.checkout-button"}}</button></a>
+		</div>
 	</div>
 </template>
