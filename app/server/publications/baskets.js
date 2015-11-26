@@ -136,7 +136,7 @@ Baskets.getTotalPrice = function (basketId) {
 	if (!Baskets.hasItems(basketId)) {
 		return [];
 	}
-  console.log(basketId)
+  
 	var price = _.map(Baskets.findOne(basketId).items, function(item) {
 		return item.price * item.count;
 	});
