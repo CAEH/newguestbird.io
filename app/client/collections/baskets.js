@@ -7,7 +7,7 @@
  * @public
  * @return {String} itemId
  */
-Baskets.createBasket = function(options) {
+Baskets.createBasket = function(options, callback) {
 	var defaults = {
 		shopId: Shops.findOne()._id,
 		customerId: Meteor.userId(),
@@ -31,6 +31,8 @@ Baskets.createBasket = function(options) {
 			console.log(error);
 			return;
 		}
+		Meteor.subscribe('baskets', Meteor.userId());
+		callback();
 	});
 };
 

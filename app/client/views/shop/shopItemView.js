@@ -4,7 +4,10 @@ Template.shopItemView.rendered = function () {
 	new ViewModel({
 		addToBasket: function (evt) {
 			if (!Baskets.hasBasket()) {
-				Baskets.createBasket();
+				Baskets.createBasket({}, function () {
+					Baskets.addItemToBasket(item._id);
+				});
+				return;
 			}
 			$(evt.target).closest('.shop-item').addClass('added-to-basked');
 			_.delay(function() {

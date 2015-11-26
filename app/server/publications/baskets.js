@@ -10,7 +10,7 @@ Meteor.publish('baskets', function(userId) {
 Baskets.allow({
 	insert: function (userId, doc) {
 		// Do not allow more than one basket per user per shop
-		if (!!Baskets.findOne({customerId: userId, shopId: doc.shopId})) {
+		if (Baskets.findOne({customerId: userId, shopId: doc.shopId})) {
 			return false;
 		}
 		return true;
