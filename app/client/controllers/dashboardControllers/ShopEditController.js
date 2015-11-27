@@ -24,6 +24,7 @@ ShopEditController = DashboardShopsController.extend({
 			shop: Shops.findOne({slug: this.params.shopSlug}),
 			content: this.params.content
     };
+
     switch(this.params.content) {
       case 'items':
         ret.items = Items.find().fetch();

@@ -1,3 +1,0 @@
-Template.shopEditView.rendered = function () {
-
-};

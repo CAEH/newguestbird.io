@@ -84,6 +84,7 @@ button:hover
 	height: 200px;
 	position: relative;
 	.file-drop-background {
+		border: 2px dashed $red;
 		height: 200px;
 		background-size: cover;
 		background-position: center center;

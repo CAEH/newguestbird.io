@@ -10,7 +10,7 @@
 			id="itemName"
 			placeholder="{{_ 'shop-edit.item.item-name'}}"
 			name="name"
-			data-bind="value: name, keyup: saveItemField">
+			value="{{name}}">
 		</div>
 
 		<div class="form-group">
@@ -21,7 +21,8 @@
 			id="itemDescription"
 			placeholder="{{_ 'shop-edit.item.item-description'}}"
 			name="description"
-			data-bind="value: description, keyup: saveItemField">
+			value="{{description}}"
+			>
 		</div>
 
 		<div class="form-group">
@@ -32,7 +33,8 @@
 			id="itemSection"
 			placeholder="{{_ 'shop-edit.item.item-section'}}"
 			name="shopSection"
-			data-bind="value: shopSection, keyup: saveItemField">
+			value="{{shopSection}}"
+			>
 		</div>
 
 		<div class="row">
@@ -45,7 +47,8 @@
 					id="itemDescription"
 					placeholder="{{_ 'shop-edit.item.item-price'}}"
 					name="price"
-					data-bind="value: price, keyup: saveItemField">
+					value="{{price}}"
+					>
 				</div>
 			</div>
 			<div class="col-xs-4">{{../shop.shopCurrency}}</div>
