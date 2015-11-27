@@ -5,6 +5,7 @@ Template.shopCheckoutDetails.rendered = function () {
 		roomNumber: basket.delivery.roomNumber,
 		email: basket.delivery.email,
 		fullName: basket.delivery.fullName,
+		phone: basket.delivery.phone,
 
 		identifyBy: function (arg) {
 			$('.checkout-identification .checkout-form-group').addClass('hide');

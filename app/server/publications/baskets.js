@@ -164,11 +164,6 @@ Baskets.validateBasket = function (basketId) {
 			field: 'delivery-time',
 			message: TAPi18n.__('shop-checkout.errors.no-delivery-time-or-date')
 		});
-	} else if (!basket.delivery.email) {
-		errors.push({
-			field: 'email',
-			message: TAPi18n.__('shop-checkout.errors.no-email')
-		});
 	} else if (!basket.delivery.fullName) {
 		errors.push({
 			field: 'fullName',

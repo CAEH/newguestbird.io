@@ -1,5 +1,8 @@
 Template.shopHeaderView.helpers({
-	mainShopImage: function (images) {
+	mainShopImage: function () {
+		if (!this.shop.images) {
+			return;
+		}
 		return this.shop.images[0];
 	}
 });

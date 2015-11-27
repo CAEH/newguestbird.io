@@ -10,7 +10,17 @@
 				name="fullName"
 				id="checkout-fullName"
 				placeholder="Full name"
-				data-bind="value: email, keyup: saveBasketDeliveryField">
+				data-bind="value: fullName, keyup: saveBasketDeliveryField">
+			</div>
+
+			<div class="form-group {{hasErrorClass 'phone'}}">
+				<label for="checkout-phone" class="{{#if basket.delivery.phone}}active{{/if}}">Mobile Number</label>
+				<input class="form-control"
+				name="phone"
+				type="phone"
+				id="checkout-phone"
+				placeholder="Mobile Number"
+				data-bind="value: phone, keyup: saveBasketDeliveryField">
 			</div>
 
 			<div class="form-group {{hasErrorClass 'email'}}">
@@ -20,7 +30,7 @@
 				type="email"
 				id="checkout-email"
 				placeholder="Email address"
-				data-bind="value: fullName, keyup: saveBasketDeliveryField">
+				data-bind="value: email, keyup: saveBasketDeliveryField">
 			</div>
 
 			<div class="form-group {{hasErrorClass 'roomNumber'}}" data-content="room-number">
