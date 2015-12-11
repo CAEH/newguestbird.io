@@ -169,6 +169,11 @@ Baskets.validateBasket = function (basketId) {
 			field: 'fullName',
 			message: TAPi18n.__('shop-checkout.errors.no-fullName')
 		});
+	} else if (!(basket.delivery.phone || basket.delivery.roomNumber)) {
+		errors.push({
+			field: 'phone',
+			message: TAPi18n.__('shop-checkout.errors.no-phone-or-room')
+		});
   }
 
 	if (errors.length) {

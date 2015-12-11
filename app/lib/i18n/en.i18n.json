@@ -12,8 +12,10 @@
 	},
 	"shop-checkout": {
 		"errors": {
+			"no-fullName": "Please enter your full name so we can identify your order.",
 			"no-items": "You have no items in your basket.",
 			"no-delivery-time-or-date": "We need you know what time would you like to get your order - please set time for delivery.",
+			"no-phone-or-room": "Please provide either your phone or your room number.",
 			"on-delivery-identification": "We need you know where are you please set a room or booking number."
 		}
 	},
