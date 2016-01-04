@@ -1,4 +1,12 @@
 Template.shopEditItemView.events({
+	'click .duplicate-item-btn': function (evt) {
+		Items.createItem(this.shopId, {
+			shopSection: this.shopSection,
+			name: this.name,
+			description: this.description,
+			price: this.price
+		});
+	},
 	'click .remove-item-btn': function (evt) {
 		Items.remove(this._id);
 	},

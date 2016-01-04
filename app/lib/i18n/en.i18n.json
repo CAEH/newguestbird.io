@@ -33,6 +33,7 @@
 		"item": {
 			"item-name": "Name",
 			"item-description": "Description",
+			"item-duplicate": "Duplicate",
 			"item-price": "Price",
 			"item-section": "Section"
 		}
