@@ -55,9 +55,10 @@ Items.getSectionItems = function(section) {
 };
 
 Items.getSectionsArray = function () {
-	return _.map(Items.getShopSections(), function (section) {
+	return _.map(Items.getShopSections(), function (section, index) {
 		return {
 			name: section,
+			number: index + 1,
 			items: Items.getSectionItems(section)
 		}
 	})

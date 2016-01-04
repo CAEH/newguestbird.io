@@ -4,12 +4,16 @@
 			<div class="col-sm-8">
 				{{#each shopSections}}
 					<div class='shop-section-container'>
-						<h3 class="shop-section-title">
-							{{name}}
-						</h3>
-						{{#each items}}
-							{{> shopItemView}}
-						{{/each}}
+						<a data-toggle="collapse" href="#section-{{number}}-item-list" aria-expanded="false" aria-controls="section-{{number}}-item-list">
+							<h3 class="shop-section-title">
+  								{{name}}
+  							</h3>
+						</a>
+						<div class="collapse" id="section-{{number}}-item-list">
+							{{#each items}}
+	  							{{> shopItemView}}
+	  						{{/each}}
+						</div>
 					</div>
 				{{/each}}
 			</div>
