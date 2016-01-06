@@ -8,7 +8,6 @@ insecure
 iron:router
 fourseven:scss
 natestrauser:animate-css
-iamkevingreen:meteor-pickadate
 peerlibrary:blaze-components
 underscore
 wenape:accounts-guest
@@ -46,3 +45,4 @@ check
 chfritz:filedrop
 pagebakers:ionicons
 chuangbo:cookie
+plusmore:pickadate-default-theme

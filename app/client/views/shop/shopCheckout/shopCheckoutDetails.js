@@ -51,7 +51,8 @@ Template.shopCheckoutDetails.rendered = function () {
 	});
 
 	$('.datepicker').pickadate({
-		min: true,
+		firstDay: true, // Monday
+		min: true, // no past dates
 		onSet: function (evt) {
 			Baskets.update(Baskets.findOne()._id, { $set: {'delivery.deliveryDate': this.get('select', 'dd.mm.yyyy')} });
 		}
