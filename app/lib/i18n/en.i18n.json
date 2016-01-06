@@ -1,4 +1,14 @@
 {
+	"shop-intro": {
+		"terms": {
+			"accept-button": "Accept",
+			"accept-text-1": "I hereby confirm that I have read and will accept Guestbird's ",
+			"accept-text-2": ".",
+			"terms-header": "Terms of service",
+			"terms-link": "terms of service",
+			"terms-text": "[terms of service]"
+		}
+	},
 	"shop-view": {
 		"item": {
 			"add-to-basket": "Add To Basket",

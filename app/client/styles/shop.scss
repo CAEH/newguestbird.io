@@ -144,6 +144,14 @@
 		}
 	}
 
+	.shop-intro {
+		padding-top: 15px;
+
+		form#accept-terms {
+			text-align: right;
+		}
+	}
+
 	@include keyframes(addToBasket) {
 		0% {
 			transform: scale(1)rotate(0deg);
