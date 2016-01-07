@@ -7,6 +7,7 @@ Template.shopEditDetailsView.rendered = function () {
 		slug: shop.slug,
 		shopCurrency: shop.shopCurrency,
 		description: shop.description,
+		intro: shop.intro,
 		availableCurrencies: availableCurrencies,
 		saveShopField: function (evt) {
 		  	var $el = $(evt.target);

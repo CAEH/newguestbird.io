@@ -27,6 +27,9 @@
 		</div>
 	{{else}}
 		<div class="container shop-intro">
+			{{#if shop.intro}}
+				<div class="pre well">{{shop.intro}}</div>
+			{{/if}}
 			<form id="accept-terms">
 				<span>{{_ 'shop-intro.terms.accept-text-1'}}</span>
 				<a aria-controls="terms-text" aria-expanded="false" data-toggle="collapse" href="#terms-text" id="terms-link">{{_ 'shop-intro.terms.terms-link'}}</a><span>{{_ 'shop-intro.terms.accept-text-2'}}</span>

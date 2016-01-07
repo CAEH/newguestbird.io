@@ -36,6 +36,17 @@
 		name="description"
 		data-bind= "value: description, keyup: saveShopField">
 	</div>
+
+	<div class="form-group">
+		<label for="shopIntro">{{_ 'shop-edit.shop-intro'}}</label>
+		<textarea
+		class="form-control"
+		id="shopIntro"
+		placeholder="{{_ 'shop-edit.shop-intro'}}"
+		name="intro"
+		data-bind= "value: intro, keyup: saveShopField"></textarea>
+	</div>
+
 	<div class="form-group">
 		<label for="shopCurrency">{{_ 'shop-edit.shop-currency'}}</label>
 		<select

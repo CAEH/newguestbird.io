@@ -2,7 +2,14 @@
 @import "bootstrap/variables";
 
 .dashboard {
-  .dashboard-header {
+	.dashboard-content {
+		textarea {
+			min-height: 100px;
+			resize: vertical;
+		}
+	}
+
+	.dashboard-header {
     padding-bottom: 20px;
     padding-top: 10px;
     .home {

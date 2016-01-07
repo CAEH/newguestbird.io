@@ -37,6 +37,7 @@
 		"shop-name": "Shop Name",
 		"shop-currency": "Shop Currency",
 		"shop-description": "Shop Description",
+		"shop-intro": "Shop Intro",
 		"shop-slug": "Shop URL",
 		"activate-shop": "Activate shop",
 		"add-item": "Add new item",

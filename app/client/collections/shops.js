@@ -22,6 +22,7 @@ Shops.createShop = function(options, callback) {
 		active: false,
 		name: undefined,
 		description: undefined,
+		intro: undefined,
 		logo: undefined,
 		sections: []
 	}
