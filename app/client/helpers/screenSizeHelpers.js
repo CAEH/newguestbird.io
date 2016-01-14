@@ -1,3 +1,3 @@
-Template.registerHelper("isSmall", function () {
-	return ScreenSize.isSmall();
+Template.registerHelper('isSmall', function () {
+  return ScreenSize.isSmall();
 });

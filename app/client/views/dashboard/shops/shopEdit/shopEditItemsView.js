@@ -3,7 +3,7 @@ Template.shopEditItemsView.rendered = function () {
 
   new ViewModel({
     addItem: function () {
-			Items.createItem(shop._id);
-		}
+      Items.createItem(shop._id);
+    }
   }).bind(this);
-}
+};

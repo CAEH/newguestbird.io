@@ -1,23 +1,21 @@
 <template name="shopEditItemsView">
 
-	<div class="row">
-		{{#each items}}
-		<div class="col-sm-6">
-			{{> shopEditItemView}}
-		</div>
-		{{/each}}
+  <div class="row">
+    {{#each items}}
+      <div class="col-sm-6">
+        {{> shopEditItemView}}
+      </div>
+    {{/each}}
 
-		<div class="col-sm-6">
-			<div class=" text-center">
-				<button class="btn add-item-btn" data-bind="click: addItem">
-					<i class="ion-ios-plus-outline"></i><br>
-					{{_ 'shop-edit.add-item'}}
-				</button>
-			</div>
-		</div>
-	</div>
+    <div class="col-sm-6">
+      <div class=" text-center">
+        <button class="btn add-item-btn" data-bind="click: addItem">
+          <i class="ion-ios-plus-outline"></i><br>
+          {{_ 'shop-edit.add-item'}}
+        </button>
+      </div>
+    </div>
+  </div>
 
-	<div class="text-right">
-
-	</div>
+  <div class="text-right"></div>
 </template>

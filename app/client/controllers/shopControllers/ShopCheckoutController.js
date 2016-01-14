@@ -3,13 +3,16 @@
  * Shop Checkout Controller
  */
 ShopCheckoutController = ShopBaseController.extend({
-	yieldTemplates: {
-    'ShopCheckoutView': { to: 'shopContent' }
+  yieldTemplates: {
+    'ShopCheckoutView': {
+      to: 'shopContent'
+    }
   },
-	data: function () {
-		return {
-			shop: Shops.findOne(),
-			basket: Baskets.findOne()
-		}
-	}
+
+  data: function () {
+    return {
+      shop: Shops.findOne(),
+      basket: Baskets.findOne()
+    };
+  }
 });

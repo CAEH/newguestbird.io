@@ -1,8 +1,8 @@
 Template.shopBasketBreakdown.helpers({
-	basketItems: function() {
-		return Baskets.getBasketItems();
-	},
-	totalBasketPrice: function() {
-		return Baskets.getTotalPrice();
-	}
+  basketItems: function () {
+    return Baskets.getBasketItems();
+  },
+  totalBasketPrice: function () {
+    return Baskets.getTotalPrice();
+  }
 });

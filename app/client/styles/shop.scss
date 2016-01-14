@@ -2,289 +2,286 @@
 @import "bootstrap/variables";
 
 .shop {
-	.btn-inactive {
-		@include opacity(35);
-	}
-	.invisible {
-		@include opacity(0);
-	}
-	.green {
-		color: $green;
-	}
+  .btn-inactive {
+    @include opacity(35);
+  }
+  .invisible {
+    @include opacity(0);
+  }
+  .green {
+    color: $green;
+  }
 
-	.shop-header {
-		width: 100%;
-		z-index: 999;
-	}
+  .shop-header {
+    width: 100%;
+    z-index: 999;
+  }
 
-	.form-group {
-		position: relative;
-		margin-bottom: 0px;
-		&:first-child {
-			.form-control {
-				border-top: 1px solid $gray-light;
-			}
-		}
-	}
+  .form-group {
+    position: relative;
+    margin-bottom: 0;
+    &:first-child {
+      .form-control {
+        border-top: 1px solid $gray-light;
+      }
+    }
+  }
 
-	.form-control {
+  .form-control {
     border: none;
-		color: $red;
+    color: $red;
     @include radius(0);
     border-bottom: 1px solid $gray-light;
-	}
-	label {
-		position: absolute;
-		top: 13px;
-		font-weight: 100;
-		right: 0;
-		padding: 0px 12px;
-		@include opacity(0);
-		@include transition();
-		&.active {
-			right: -5px;
-			@include opacity(100);
-		}
-	}
+  }
+  label {
+    position: absolute;
+    top: 13px;
+    font-weight: 100;
+    right: 0;
+    padding: 0 12px;
+    @include opacity(0);
+    @include transition();
+    &.active {
+      right: -5px;
+      @include opacity(100);
+    }
+  }
 
-	.shop-hero {
-		position: relative;
-		.shop-hero-img {
-			width: 100%;
-			height: 180px;
-			background-size: cover;
-			background-position: center center;
-			@media #{$not-small} {
-				height: 300px;
-			}
-		}
-		.shop-hero-img-overlay {
-			width: 100%;
-			height: 100%;
-	        // @include gradient-background(0deg, $black, transparent);
-	        background: $black;
-			@include opacity(50);
-		}
-		.shop-hero-content {
-			position: absolute;
-			bottom: 10px;
-			left: 0;
-			width: 100%;
-			text-align: center;
+  .shop-hero {
+    position: relative;
+    .shop-hero-img {
+      width: 100%;
+      height: 180px;
+      background-size: cover;
+      background-position: center center;
+      @media #{$not-small} {
+        height: 300px;
+      }
+    }
+    .shop-hero-img-overlay {
+      width: 100%;
+      height: 100%;
+      // @include gradient-background(0deg, $black, transparent);
+      background: $black;
+      @include opacity(50);
+    }
+    .shop-hero-content {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      text-align: center;
 
-			h1 {
-				color: $gray-lighter;
-				margin-bottom: 0;
-				margin-top: 10px;
-				margin-bottom: 5px;
+      h1 {
+        color: $gray-lighter;
+        margin-bottom: 0;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+      .shop-description {
+        color: $gray-lighter;
+      }
 
-			}
-			.shop-description {
-				color: $gray-lighter;
-			}
+      .shop-logo {
+        width: 64px;
+        margin: 0 auto;
+        background: rgba($white, 0.6);
+        @include radius(2px);
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
 
-			.shop-logo {
-				width: 64px;
-				margin: 0 auto;
-				background: rgba($white, 0.6);
-				@include radius(2px);
-				img {
-					width: 100%;
-				}
-			}
-		}
-	}
+  .shop-content {
+    padding-top: 15px;
 
-	.shop-content {
-		padding-top: 15px;
+    &.basket-open {
+      padding-bottom: 100px;
+    }
 
-		&.basket-open {
-			padding-bottom: 100px;
-		}
+    .shop-section-title {
+      text-transform: uppercase;
+      border-bottom: 1px solid $brand-primary;
+      margin-bottom: 0.5em;
+      margin-top: 0;
+      padding-bottom: 0.2em;
+      color: $brand-primary;
+    }
 
-		.shop-section-title {
-			text-transform: uppercase;
-			border-bottom: 1px solid $brand-primary;
-			margin-bottom: 0.5em;
-			margin-top: 0;
-			padding-bottom: 0.2em;
-			color: $brand-primary;
-		}
+    .shop-item {
+      margin-bottom: 15px;
+      &:not(:last-child) {
+        padding-bottom: 5px;
+        border-bottom: 1px dotted $gray-light;
+      }
+      &.added-to-basked {
+        i {
+          animation: addToBasket 0.5s ease-in-out 1;
+        }
+      }
 
-		.shop-item {
-			margin-bottom: 15px;
-			&:not(:last-child) {
-				padding-bottom: 5px;
-				border-bottom: 1px dotted $gray-light;
-			}
-			&.added-to-basked {
-				i {
-					animation: addToBasket 0.5s ease-in-out 1;
-				}
-			}
+      .item-title {
+        margin: 0 0 0.15em;
+      }
 
-			.item-title {
-				margin: 0;
-				margin-bottom: 0.15em;
-			}
+      .item-description {
+        color: $gray-darker;
+      }
 
-			.item-description {
-				color: $gray-darker;
-			}
+      .price {
+        font-size: 1.2em;
+        color: $brand-primary;
+        padding-top: 0.35em;
+      }
+      .add-to-icon {
+        font-size: 2em;
+        color: $brand-primary;
+      }
+    }
+  }
 
-			.price {
-				font-size: 1.2em;
-				color: $brand-primary;
-				padding-top: 0.35em;
-			}
-			.add-to-icon {
-				font-size: 2em;
-				color: $brand-primary;
-			}
-		}
-	}
+  .shop-intro {
+    padding-top: 15px;
 
-	.shop-intro {
-		padding-top: 15px;
+    form#accept-terms {
+      text-align: right;
+    }
+  }
 
-		form#accept-terms {
-			text-align: right;
-		}
-	}
+  @include keyframes(addToBasket) {
+    0% {
+      transform: scale(1)rotate(0deg);
+    }
+    50% {
+      transform: scale(1.6)rotate(25deg);
+    }
+    100% {
+      transform: scale(1)rotate(0deg);
+    }
+  }
 
-	@include keyframes(addToBasket) {
-		0% {
-			transform: scale(1)rotate(0deg);
-		}
-		50% {
-			transform: scale(1.6)rotate(25deg);
-		}
-		100% {
-			transform: scale(1)rotate(0deg);
-		}
-	}
+  .shop-basket {
+    max-width: 960px;
+    @media #{$small} {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      padding: 0;
+      background: $white;
+      width: 100%;
+      border-top: 1px solid $gray-light;
+    }
 
-	.shop-basket {
-		max-width: 960px;
-		@media #{$small} {
-			position: fixed;
-			bottom: 0;
-			left: 0;
-			padding: 0;
-			background: $white;
-			width: 100%;
-			border-top: 1px solid $gray-light;
-		}
+    .checkout-button {
+      width: 100%;
+    }
 
-		.checkout-button {
-			width: 100%;
-		}
+    .basket-title {
+      margin: 0 auto;
+      color: $brand-primary;
+      font-size: 1.2em;
+      @media #{$small} {
+        display: none;
+      }
+    }
+    .basket-sentence {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 0.9em;
+      b {
+        font-weight: 400;
+        color: $brand-primary;
+        border-bottom: 1px dotted $brand-primary;
+      }
+    }
+  }
 
-		.basket-title {
-			margin: 0 auto;
-			color: $brand-primary;
-			font-size: 1.2em;
-			@media #{$small} {
-				display: none;
-			}
-		}
-		.basket-sentence {
-			text-align: center;
-			margin-top: 10px;
-			font-size: 0.9em;
-			b {
-				font-weight: 400;
-				color: $brand-primary;
-				border-bottom: 1px dotted $brand-primary;
-			}
-		}
-	}
+  .basket-breakdown {
+    margin: 10px auto auto;
+    .breakdown-item {
+      padding: 1em;
+      background: $gray-lighter;
+      border-bottom: 1px solid $gray-light;
+      &:first-child {
+        border-top: 1px solid $gray-light;
+      }
+      @media #{$not-small} {
+        border-left: 1px solid $gray-light;
+        border-right: 1px solid $gray-light;
+      }
+    }
+    .breakdown-item-price {
+      padding-top: 5px;
+      display: inline-block;
+    }
+    .breakdown-item-count-controllers {
+      font-size: 15px;
+      margin-right: 5px;
 
-	.basket-breakdown {
-		margin: auto;
-		margin-top: 10px;
-		.breakdown-item {
-			padding: 1em;
-			background: $gray-lighter;
-			border-bottom: 1px solid $gray-light;
-			&:first-child {
-				border-top: 1px solid $gray-light;
-			}
-			@media #{$not-small} {
-				border-left: 1px solid $gray-light;
-    		border-right: 1px solid $gray-light;
-			}
-		}
-		.breakdown-item-price {
-			padding-top: 5px;
-    	display: inline-block;
-		}
-		.breakdown-item-count-controllers {
-			font-size: 15px;
-			margin-right: 5px;
+      .count-controller {
+        padding: 5px;
+        border: 1px solid $gray-light;
+        @include radius(100%);
+        background: $white;
+        color: $brand-primary;
+        margin-right: 2px;
+        text-align: center;
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        &:active {
+          background: $gray-lighter;
+        }
+      }
+    }
+    .breakdown-total {
+      padding: 1em;
+      font-size: 1.3em;
+      .total-price {
+        color: $brand-primary;
+      }
+    }
+  }
+  .error-message {
+    font-size: 10px;
+    color: $brand-danger;
+  }
 
-			.count-controller {
-				padding: 5px;
-				border: 1px solid $gray-light;
-				@include radius(100%);
-				background: $white;
-				color: $brand-primary;
-				margin-right: 2px;
-				text-align: center;
-				width: 32px;
-				height: 32px;
-				display: inline-block;
-				&:active {
-					background: $gray-lighter;
-				}
-			}
-		}
-		.breakdown-total {
-			padding: 1em;
-			font-size: 1.3em;
-			.total-price {
-				color: $brand-primary;
-			}
-		}
-	}
-	.error-message {
-		font-size: 10px;
-	    color: $brand-danger;
-	}
-
-	.shop-checkout {
-		max-width: 780px;
-		margin: auto;
-		h4 {
-			text-transform: uppercase;
-			margin-bottom: 14px;
-			margin-top: 25px;
-		}
-	}
+  .shop-checkout {
+    max-width: 780px;
+    margin: auto;
+    h4 {
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      margin-top: 25px;
+    }
+  }
 }
 
 .shop-confirmation {
-	.order-status {
-		font-size: 1.2em;
-		margin-bottom: 5px;
-	}
+  .order-status {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
 }
 
 .textual-input {
-	border: none;
-	color: $red;
-	padding: 0 5px;
+  border: none;
+  color: $red;
+  padding: 0 5px;
 }
 
 .checkout-delivery-time {
-	margin-bottom: 10px;
-	.form-group {
-			text-align: center;
-			font-size: 1.2em;
-			padding: 10px 5px;
-			border: 0;
-			border-bottom: 1px solid $gray-light;
-			border-top: 1px solid $gray-light;
-			padding: 10px 0;
-	}
+  margin-bottom: 10px;
+  .form-group {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 10px 5px;
+    border: 0;
+    border-bottom: 1px solid $gray-light;
+    border-top: 1px solid $gray-light;
+    padding: 10px 0;
+  }
 }

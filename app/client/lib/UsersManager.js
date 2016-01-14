@@ -7,6 +7,6 @@ if (!Meteor.userId()) {
 
 UsersManager = {
   isGuest: function () {
-    return !Meteor.user()
+    return !Meteor.user();
   }
-}
+};

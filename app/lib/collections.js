@@ -31,8 +31,8 @@ Orders = new Meteor.Collection('orders');
  * Images Collection
  * @type {Meteor Collection}
  */
-var imageStore = new FS.Store.GridFS("images");
+var imageStore = new FS.Store.GridFS('images');
 
-Images = new FS.Collection("images", {
+Images = new FS.Collection('images', {
   stores: [imageStore]
 });

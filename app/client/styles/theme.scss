@@ -1,42 +1,43 @@
 @import "bootstrap.scss";
 @import url("/fonts/icons/styles.css");
 
-body, html {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	font-family: $font-family-sans-serif;
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: $font-family-sans-serif;
 }
 body {
-	overflow-x: hidden;
+  overflow-x: hidden;
 }
 .green {
-	color: $green;
+  color: $green;
 }
 .red {
-	color: $red;
+  color: $red;
 }
 .transitioner {
-	overflow: initial;
+  overflow: initial;
 }
 
 .max-width-x-small {
-	max-width: 480px;
+  max-width: 480px;
 }
 
 .max-width-small {
-	max-width: 768px;
+  max-width: 768px;
 }
 
 #iron-router-progress {
-	background-color: $red;
-	box-shadow: none;
-	&.spinner:before {
-		border: 3px solid $red;
-	}
+  background-color: $red;
+  box-shadow: none;
+  &.spinner:before {
+    border: 3px solid $red;
+  }
 }
 
-input:hover
+input:hover,
 input:active,
 input:focus,
 textarea:active,
@@ -44,78 +45,79 @@ textarea:hover,
 textarea:focus,
 button:focus,
 button:active,
-button:hover
-{
-    outline:0px !important;
+button:hover {
+  outline: 0 !important;
 }
 .vertical-align {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 .full-width {
-	width: 100%;
+  width: 100%;
 }
-.not-found, .loading {
-	.not-found-cover, .loading-cover {
-		background: url('/images/common/notfound.jpg');
-		background-position: center center;
-		background-size: cover;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		@include opacity(0.3);
-		z-index: -1;
-	}
-	.loading-cover {
-		background-image: url('/images/common/loading.jpg');
-	}
-	h1 {
-		top: 50%;
-		margin-top: -45px;
-		font-weight: 700;
-		position: absolute;
-		width: 100%;
-		text-align: center;
-		color: $brand-primary;
-	}
+.not-found,
+.loading {
+  .not-found-cover,
+  .loading-cover {
+    background: url('/images/common/notfound.jpg');
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @include opacity(0.3);
+    z-index: -1;
+  }
+  .loading-cover {
+    background-image: url('/images/common/loading.jpg');
+  }
+  h1 {
+    top: 50%;
+    margin-top: -45px;
+    font-weight: 700;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: $brand-primary;
+  }
 }
 
 .file-drop {
-	height: 200px;
-	position: relative;
-	.file-drop-background {
-		border: 2px dashed $red;
-		height: 200px;
-		background-size: cover;
-		background-position: center center;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-	}
-	.file-drop-label {
-		position: absolute;
+  height: 200px;
+  position: relative;
+  .file-drop-background {
+    border: 2px dashed $red;
+    height: 200px;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .file-drop-label {
+    position: absolute;
     color: $red;
-		@include opacity(0.5);
+    @include opacity(0.5);
     text-align: center;
     width: 100%;
     top: 50%;
     margin-top: -10px;
     font-size: 20px;
     font-weight: 700;
-	}
-	&.file-over {
-			.file-drop-background {
-				@include opacity(0.2);
-			}
-			.file-drop-label {
-				@include opacity(1);
-			}
-	}
-	&.file-drop-logo {
-		  width: 200px;
-	}
+  }
+  &.file-over {
+    .file-drop-background {
+      @include opacity(0.2);
+    }
+    .file-drop-label {
+      @include opacity(1);
+    }
+  }
+  &.file-drop-logo {
+    width: 200px;
+  }
 }
 
 .pre {
-	white-space: pre-wrap;
+  white-space: pre-wrap;
 }

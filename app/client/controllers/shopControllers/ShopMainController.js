@@ -4,14 +4,17 @@
  */
 
 ShopMainController = ShopBaseController.extend({
-	yieldTemplates: {
-    'shopMainView': { to: 'shopContent' }
+  yieldTemplates: {
+    'shopMainView': {
+      to: 'shopContent'
+    }
   },
-	data: function () {
-    	return {
-    		shop: Shops.findOne(),
-    		items: Items.find().fetch(),
-    		shopSections: Items.getSectionsArray()
-		}
-	}
+
+  data: function () {
+    return {
+      shop: Shops.findOne(),
+      items: Items.find().fetch(),
+      shopSections: Items.getSectionsArray()
+    };
+  }
 });

@@ -5,8 +5,10 @@ Template.dashboardCreateShopView.rendered = function () {
         name: $('[name="name"]').val(),
         slug: $('[name="slug"]').val()
       }, function (error, res) {
-        Router.go('shopEdit', {shopSlug: $('[name="slug"]').val()})
+        Router.go('shopEdit', {
+          shopSlug: $('[name="slug"]').val()
+        });
       });
     }
   }).bind(this);
-}
+};

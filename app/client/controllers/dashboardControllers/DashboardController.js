@@ -4,10 +4,10 @@
  */
 
 DashboardController = RouteController.extend({
-  template: "dashboardView",
+  template: 'dashboardView',
   onBeforeAction: function () {
     if (UsersManager.isGuest()) {
-      Router.go('login')
+      Router.go('login');
     }
     this.next();
   }
@@ -31,28 +31,35 @@ DashboardLogoutController = DashboardController.extend({
 
 DashboardShopsController = DashboardController.extend({
   yieldTemplates: {
-    'dashboardShopsView': { to: 'content' }
+    'dashboardShopsView': {
+      to: 'content'
+    }
   },
+
   waitOn: function () {
     return [
-              Meteor.subscribe('shops', Meteor.userId())
-           ]
+      Meteor.subscribe('shops', Meteor.userId())
+    ];
   },
+
   data: function (argument) {
     return {
       shops: Shops.find().fetch(),
       content: 'shops'
-    }
+    };
   }
 });
 
 DashboardCreateShopController = DashboardController.extend({
   yieldTemplates: {
-    'dashboardCreateShopView': {to: 'content'}
+    'dashboardCreateShopView': {
+      to: 'content'
+    }
   },
+  
   waitOn: function () {
     return [
-              Meteor.subscribe('shops', Meteor.userId())
-           ]
+      Meteor.subscribe('shops', Meteor.userId())
+    ];
   }
 });

@@ -1,8 +1,8 @@
-availableCurrencies = ["EUR"];
+availableCurrencies = ['EUR'];
 currenciesDetails = {
-	EUR: {
-		code: "EUR",
-		name: 'Euro',
-		symbol: "€"
-	}
+  EUR: {
+    code: 'EUR',
+    name: 'Euro',
+    symbol: '€'
+  }
 };

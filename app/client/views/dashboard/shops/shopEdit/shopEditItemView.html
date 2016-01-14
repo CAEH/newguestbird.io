@@ -1,60 +1,37 @@
 <template name="shopEditItemView">
-	<div class="shop-edit-item">
-		<span class="remove-item-btn" data-bind="click: removeItem"><i class="ion-ios-close-outline"></i></span>
-		<h3>{{#if name}}{{name}}{{else}}New item{{/if}}</h3>
-		<div class="form-group">
-			<label for="itemName">{{_ "shop-edit.item.item-name"}}</label>
-			<input
-			type="text"
-			class="form-control item-field"
-			id="itemName"
-			placeholder="{{_ 'shop-edit.item.item-name'}}"
-			name="name"
-			value="{{name}}">
-		</div>
+  <div class="shop-edit-item">
+    <span class="remove-item-btn" data-bind="click: removeItem">
+      <i class="ion-ios-close-outline"></i>
+    </span>
+    <h3>
+      {{#if name}}{{name}}{{else}}New item{{/if}}
+    </h3>
+    <div class="form-group">
+      <label for="itemName">{{_ "shop-edit.item.item-name"}}</label>
+      <input class="form-control item-field" id="itemName" name="name" placeholder="{{_ 'shop-edit.item.item-name'}}" type="text" value="{{name}}">
+    </div>
 
-		<div class="form-group">
-			<label for="itemDescription">{{_ "shop-edit.item.item-description"}}</label>
-			<input
-			type="text"
-			class="form-control item-field"
-			id="itemDescription"
-			placeholder="{{_ 'shop-edit.item.item-description'}}"
-			name="description"
-			value="{{description}}"
-			>
-		</div>
+    <div class="form-group">
+      <label for="itemDescription">{{_ "shop-edit.item.item-description"}}</label>
+      <input class="form-control item-field" id="itemDescription" name="description" placeholder="{{_ 'shop-edit.item.item-description'}}" type="text" value="{{description}}">
+    </div>
 
-		<div class="form-group">
-			<label for="itemSection">{{_ "shop-edit.item.item-section"}}</label>
-			<input
-			type="text"
-			class="form-control item-field"
-			id="itemSection"
-			placeholder="{{_ 'shop-edit.item.item-section'}}"
-			name="shopSection"
-			value="{{shopSection}}"
-			>
-		</div>
+    <div class="form-group">
+      <label for="itemSection">{{_ "shop-edit.item.item-section"}}</label>
+      <input class="form-control item-field" id="itemSection" name="shopSection" placeholder="{{_ 'shop-edit.item.item-section'}}" type="text" value="{{shopSection}}">
+    </div>
 
-		<div class="row">
-			<div class="col-xs-8">
-				<div class="form-group">
-					<label for="itemDescription">{{_ "shop-edit.item.item-price"}}</label>
-					<input
-					type="number"
-					class="form-control item-field"
-					id="itemDescription"
-					placeholder="{{_ 'shop-edit.item.item-price'}}"
-					name="price"
-					value="{{price}}"
-					>
-				</div>
-			</div>
-			<div class="col-xs-4">{{../shop.shopCurrency}}</div>
-		</div>
+    <div class="row">
+      <div class="col-xs-8">
+        <div class="form-group">
+          <label for="itemDescription">{{_ "shop-edit.item.item-price"}}</label>
+          <input class="form-control item-field" id="itemDescription" name="price" placeholder="{{_ 'shop-edit.item.item-price'}}" type="number" value="{{price}}">
+        </div>
+      </div>
+      <div class="col-xs-4">{{../shop.shopCurrency}}</div>
+    </div>
 
-		<button class="btn duplicate-item-btn">{{_ "shop-edit.item.item-duplicate"}}</button>
+    <button class="btn duplicate-item-btn">{{_ "shop-edit.item.item-duplicate"}}</button>
 
-	</div>
+  </div>
 </template>

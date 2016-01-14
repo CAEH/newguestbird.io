@@ -1,44 +1,45 @@
 <template name="shopMainView">
-	{{#if termsAccepted}}
-		<div class="shop-content {{basketOpenClass}} container">
-			<div class="row">
-				<div class="col-sm-8">
-					{{#each shopSections}}
-						<div class='shop-section-container'>
-							<a data-toggle="collapse" href="#section-{{number}}-item-list" aria-expanded="false" aria-controls="section-{{number}}-item-list">
-								<h3 class="shop-section-title">
-										{{name}}
-									</h3>
-							</a>
-							<div class="collapse" id="section-{{number}}-item-list">
-								{{#each items}}
-										{{> shopItemView}}
-									{{/each}}
-							</div>
-						</div>
-					{{/each}}
-				</div>
-				<div class="col-sm-4">
-					<div class="shop-basket {{hideBasketClass}}">
-						{{> shopBasketView}}
-					</div>
-				</div>
-			</div>
-		</div>
-	{{else}}
-		<div class="container shop-intro">
-			{{#if shop.intro}}
-				<div class="pre well">{{shop.intro}}</div>
-			{{/if}}
-			<form id="accept-terms">
-				<span>{{_ 'shop-intro.terms.accept-text-1'}}</span>
-				<a aria-controls="terms-text" aria-expanded="false" data-toggle="collapse" href="#terms-text" id="terms-link">{{_ 'shop-intro.terms.terms-link'}}</a><span>{{_ 'shop-intro.terms.accept-text-2'}}</span>
-				<button class="btn" type="submit">{{_ 'shop-intro.terms.accept-button'}}</button>
-			</form>
-			<div class="collapse" id="terms-text">
-				<h2>{{_ 'shop-intro.terms.terms-header'}}</h2>
-				<p>{{_ 'shop-intro.terms.terms-text'}}</p>
-			</div>
-		</div>
-	{{/if}}
+  {{#if termsAccepted}}
+    <div class="shop-content {{basketOpenClass}} container">
+      <div class="row">
+        <div class="col-sm-8">
+          {{#each shopSections}}
+            <div class='shop-section-container'>
+              <a aria-controls="section-{{number}}-item-list" aria-expanded="false" data-toggle="collapse" href="#section-{{number}}-item-list">
+                <h3 class="shop-section-title">
+                  {{name}}
+                </h3>
+              </a>
+              <div class="collapse" id="section-{{number}}-item-list">
+                {{#each items}}
+                  {{> shopItemView}}
+                {{/each}}
+              </div>
+            </div>
+          {{/each}}
+        </div>
+        <div class="col-sm-4">
+          <div class="shop-basket {{hideBasketClass}}">
+            {{> shopBasketView}}
+          </div>
+        </div>
+      </div>
+    </div>
+    {{else}}
+    <div class="container shop-intro">
+      {{#if shop.intro}}
+        <div class="pre well">{{shop.intro}}</div>
+      {{/if}}
+      <form id="accept-terms">
+        <span>{{_ 'shop-intro.terms.accept-text-1'}}</span>
+        <a aria-controls="terms-text" aria-expanded="false" data-toggle="collapse" href="#terms-text" id="terms-link">{{_ 'shop-intro.terms.terms-link'}}</a>
+        <span>{{_ 'shop-intro.terms.accept-text-2'}}</span>
+        <button class="btn" type="submit">{{_ 'shop-intro.terms.accept-button'}}</button>
+      </form>
+      <div class="collapse" id="terms-text">
+        <h2>{{_ 'shop-intro.terms.terms-header'}}</h2>
+        <p>{{_ 'shop-intro.terms.terms-text'}}</p>
+      </div>
+    </div>
+  {{/if}}
 </template>

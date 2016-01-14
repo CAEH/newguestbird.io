@@ -1,67 +1,50 @@
 <template name="shopCheckoutDetails">
-	<form class="checkout-form">
-		<div class="container">
-			<h4>Your information</h4>
-		</div>
-		<div>
-			<div class="form-group {{hasErrorClass 'fullName'}}">
-				<label for="checkout-name" class="{{#if basket.delivery.fullName}}active{{/if}}">Full Name</label>
-				<input class="form-control"
-				name="fullName"
-				id="checkout-fullName"
-				placeholder="Full name"
-				data-bind="value: fullName, keyup: saveBasketDeliveryField">
-			</div>
+  <form class="checkout-form">
+    <div class="container">
+      <h4>Your information</h4>
+    </div>
+    <div>
+      <div class="form-group {{hasErrorClass 'fullName'}}">
+        <label class="{{#if basket.delivery.fullName}}active{{/if}}" for="checkout-name">Full Name</label>
+        <input class="form-control" data-bind="value: fullName, keyup: saveBasketDeliveryField" id="checkout-fullName" name="fullName" placeholder="Full name">
+      </div>
 
-			<div class="form-group {{hasErrorClass 'phone'}}">
-				<label for="checkout-phone" class="{{#if basket.delivery.phone}}active{{/if}}">Mobile number</label>
-				<input class="form-control"
-				name="phone"
-				type="tel"
-				pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-				id="checkout-phone"
-				placeholder="Mobile number"
-				data-bind="value: phone, keyup: saveBasketDeliveryField">
-				<!-- for pattern, see https://regex101.com/r/wZ4uU6/10 -->
-			</div>
+      <div class="form-group {{hasErrorClass 'phone'}}">
+        <label class="{{#if basket.delivery.phone}}active{{/if}}" for="checkout-phone">Mobile number</label>
+        <input class="form-control" data-bind="value: phone, keyup: saveBasketDeliveryField" id="checkout-phone" name="phone" pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}" placeholder="Mobile number" type="tel">
+        <!-- for pattern, see https://regex101.com/r/wZ4uU6/10 -->
+      </div>
 
-			<div class="form-group {{hasErrorClass 'email'}}">
-				<label for="checkout-email" class="{{#if basket.delivery.email}}active{{/if}}">Email address</label>
-				<input class="form-control"
-				name="email"
-				type="email"
-				id="checkout-email"
-				placeholder="Email address"
-				data-bind="value: email, keyup: saveBasketDeliveryField">
-			</div>
+      <div class="form-group {{hasErrorClass 'email'}}">
+        <label class="{{#if basket.delivery.email}}active{{/if}}" for="checkout-email">Email address</label>
+        <input class="form-control" data-bind="value: email, keyup: saveBasketDeliveryField" id="checkout-email" name="email" placeholder="Email address" type="email">
+      </div>
 
-			<div class="form-group {{hasErrorClass 'roomNumber'}}" data-content="room-number">
-				<label for="room-number" class="{{#if basket.delivery.roomNumber}}active{{/if}}">
-					Room Number
-					<!-- <br> <small>If you don't know your room number yet, leave this field empty</small> -->
-				</label>
-				<input type="text"
-				pattern="[0-9]*"
-				name="roomNumber"
-				placeholder= "Room number"
-				id="room-number"
-				class="form-control"
-				data-bind="value: roomNumber, keyup: saveBasketDeliveryField">
-			</div>
-		</div>
-		<div class="checkout-delivery-time">
-			<div class="container">
-				<h4>Delivery time</h4>
-			</div>
-			<div class="form-group">
-				<span class="textual-input datepicker">{{parseDate basket.delivery.deliveryDate}}</span>
-				{{#if equals basket.delivery.deliveryTime 'now'}} and {{else}} at {{/if}}
-				<span class="textual-input timepicker">{{basket.delivery.deliveryTime}}</span>
-			</div>
-		</div>
+      <div class="form-group {{hasErrorClass 'roomNumber'}}" data-content="room-number">
+        <label class="{{#if basket.delivery.roomNumber}}active{{/if}}" for="room-number">
+          Room Number
+          <!-- <br> <small>If you don't know your room number yet, leave this field empty</small> -->
+        </label>
+        <input class="form-control" data-bind="value: roomNumber, keyup: saveBasketDeliveryField" id="room-number" name="roomNumber" pattern="[0-9]*" placeholder="Room number" type="text">
+      </div>
+    </div>
+    <div class="checkout-delivery-time">
+      <div class="container">
+        <h4>Delivery time</h4>
+      </div>
+      <div class="form-group">
+        <span class="textual-input datepicker">{{parseDate basket.delivery.deliveryDate}}</span>
+        {{#if equals basket.delivery.deliveryTime 'now'}}
+          and
+          {{else}}
+          at
+        {{/if}}
+        <span class="textual-input timepicker">{{basket.delivery.deliveryTime}}</span>
+      </div>
+    </div>
 
-		<section class="checkout-order">
-			<button class="btn btn-primary full-width" type='submit'>Order</button>
-		</section>
-	</form>
+    <section class="checkout-order">
+      <button class="btn btn-primary full-width" type='submit'>Order</button>
+    </section>
+  </form>
 </template>

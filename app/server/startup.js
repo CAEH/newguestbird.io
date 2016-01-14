@@ -1,5 +1,4 @@
  Meteor.startup(function () {
-
    // Password protect on development and staging
    if (EnvironmentManager.isDevelopment() || EnvironmentManager.isStage()) {
      if (Meteor.settings.public.basicAuth) {

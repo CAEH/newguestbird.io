@@ -3,9 +3,13 @@
  * @scope Server
  */
 
-Meteor.publish('items', function(shopSlug) {
+Meteor.publish('items', function (shopSlug) {
   if (shopSlug) {
-    return Items.find({ shopId: Shops.findOne({ slug: shopSlug })._id });
+    return Items.find({
+      shopId: Shops.findOne({
+        slug: shopSlug
+      })._id
+    });
   }
   return AccessManager.getItemsBySubdomain(this);
 });

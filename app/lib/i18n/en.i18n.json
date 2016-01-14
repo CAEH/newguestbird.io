@@ -1,52 +1,52 @@
 {
-	"shop-intro": {
-		"terms": {
-			"accept-button": "Accept",
-			"accept-text-1": "I hereby confirm that I have read and will accept Guestbird's ",
-			"accept-text-2": ".",
-			"terms-header": "Terms of service",
-			"terms-link": "terms of service",
-			"terms-text": "[terms of service]"
-		}
-	},
-	"shop-view": {
-		"item": {
-			"add-to-basket": "Add To Basket",
-			"remove-from-basket": "Remove From Basket"
-		}
-	},
-	"shop-basket": {
-		"basket-sentence": "You have <b>%s</b> in your basket",
-		"change": "Chnage",
-		"checkout-button": "Order Now"
-	},
-	"shop-checkout": {
-		"errors": {
-			"no-fullName": "Please enter your full name so we can identify your order.",
-			"no-items": "You have no items in your basket.",
-			"no-delivery-time-or-date": "We need you know what time would you like to get your order - please set time for delivery.",
-			"no-phone-or-room": "Please provide either your phone or your room number.",
-			"on-delivery-identification": "We need you know where are you please set a room or booking number."
-		}
-	},
-	"basket-breakdown": {
-		"total": "Total Price"
-	},
-	"shop-edit": {
-		"title": "Edit Shop",
-		"shop-name": "Shop Name",
-		"shop-currency": "Shop Currency",
-		"shop-description": "Shop Description",
-		"shop-intro": "Shop Intro",
-		"shop-slug": "Shop URL",
-		"activate-shop": "Activate shop",
-		"add-item": "Add new item",
-		"item": {
-			"item-name": "Name",
-			"item-description": "Description",
-			"item-duplicate": "Duplicate",
-			"item-price": "Price",
-			"item-section": "Section"
-		}
-	}
+  "shop-intro": {
+    "terms": {
+      "accept-button": "Accept",
+      "accept-text-1": "I hereby confirm that I have read and will accept Guestbird's ",
+      "accept-text-2": ".",
+      "terms-header": "Terms of service",
+      "terms-link": "terms of service",
+      "terms-text": "[terms of service]"
+    }
+  },
+  "shop-view": {
+    "item": {
+      "add-to-basket": "Add To Basket",
+      "remove-from-basket": "Remove From Basket"
+    }
+  },
+  "shop-basket": {
+    "basket-sentence": "You have <b>%s</b> in your basket",
+    "change": "Chnage",
+    "checkout-button": "Order Now"
+  },
+  "shop-checkout": {
+    "errors": {
+      "no-fullName": "Please enter your full name so we can identify your order.",
+      "no-items": "You have no items in your basket.",
+      "no-delivery-time-or-date": "We need you know what time would you like to get your order - please set time for delivery.",
+      "no-phone-or-room": "Please provide either your phone or your room number.",
+      "on-delivery-identification": "We need you know where are you please set a room or booking number."
+    }
+  },
+  "basket-breakdown": {
+    "total": "Total Price"
+  },
+  "shop-edit": {
+    "title": "Edit Shop",
+    "shop-name": "Shop Name",
+    "shop-currency": "Shop Currency",
+    "shop-description": "Shop Description",
+    "shop-intro": "Shop Intro",
+    "shop-slug": "Shop URL",
+    "activate-shop": "Activate shop",
+    "add-item": "Add new item",
+    "item": {
+      "item-name": "Name",
+      "item-description": "Description",
+      "item-duplicate": "Duplicate",
+      "item-price": "Price",
+      "item-section": "Section"
+    }
+  }
 }

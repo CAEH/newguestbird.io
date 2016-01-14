@@ -7,7 +7,8 @@ AlertsManager = {
   showAlert: function (options) {
     Session.set('AlertsManager.alertData', options);
   },
+  
   clearAlert: function () {
     Session.set('AlertsManager.alertData', null);
   }
-}
+};

@@ -3,9 +3,11 @@
  * @scope Server
  */
 
-Meteor.publish('shops', function(userId) {
+Meteor.publish('shops', function (userId) {
   if (userId) {
-    return Shops.find({ownerId: userId});
+    return Shops.find({
+      ownerId: userId
+    });
   }
   return AccessManager.getShopBySubdomain(this);
 });
@@ -15,18 +17,19 @@ Shops.getOwnerId = function (shopId) {
 };
 
 Shops.allow({
-	insert: function (userId, doc) {
-      // is guest
-      if (!Meteor.users.findOne(userId).emails) {
-        return false;
-      }
-      // slug exists
-		  if (Shops.findOne({slug: doc.slug})) {
-        throw new Meteor.Error('SLUG_UNAVAILABLE');
-        return false;
-      }
-      return true;
-	},
+  insert: function (userId, doc) {
+    // is guest
+    if (!Meteor.users.findOne(userId).emails) {
+      return false;
+    }
+    // slug exists
+    if (Shops.findOne({
+      slug: doc.slug
+    })) {
+      throw new Meteor.Error('SLUG_UNAVAILABLE');
+    }
+    return true;
+  },
   update: function (userId, doc, fields, modifier) {
     // not owner
     if (userId !== doc.ownerId) {

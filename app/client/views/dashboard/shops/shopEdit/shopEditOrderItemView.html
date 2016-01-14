@@ -2,7 +2,8 @@
   <div class="order-table-item">
     <div class="row order-row" data-bind="click: toggleInfo">
       <div class="col-xs-3">
-        {{delivery.deliveryDate}} {{delivery.deliveryTime}}
+        {{delivery.deliveryDate}}
+        {{delivery.deliveryTime}}
       </div>
       <div class="col-xs-3">
         {{delivery.fullName}}
@@ -23,17 +24,21 @@
           <div class="order-items">
             <h4>Items</h4>
             {{#each items}}
-            <div class="order-item">
-              {{name}} {{price}}
-            </div>
+              <div class="order-item">
+                {{name}}
+                {{price}}
+              </div>
             {{/each}}
           </div>
         </div>
         <div class="col-sm-4">
-            <h4>Orderer details</h4>
-            Name: {{delivery.fullName}}<br>
-            Email: {{delivery.email}}<br>
-            Mobile: {{delivery.phone}}
+          <h4>Orderer details</h4>
+          Name:
+          {{delivery.fullName}}<br>
+          Email:
+          {{delivery.email}}<br>
+          Mobile:
+          {{delivery.phone}}
         </div>
       </div>
       <div class="order-actions text-right">

@@ -1,22 +1,30 @@
 <template name="shopEditView">
-	<div class="container">
-		<h1>{{shop.name}}</h1>
-		<div class="row">
-			<div class="col-sm-3">
-				<div class="shop-edit-legend">
-					<ul class="nav nav-pills">
-					  <li class="{{setActiveClassIf content 'shop-details'}}"><a href="/shops/{{shop.slug}}/shop-details">Shop Details</a></li>
-					  <li class="{{setActiveClassIf content 'items'}}"><a href="/shops/{{shop.slug}}/items">Items</a></li>
-					  <li class="{{setActiveClassIf content 'orders'}}"><a href="/shops/{{shop.slug}}/orders">Orders</a></li>
-					  <li><a target="_blank" href="{{shopUrl shop.slug}}">View shop</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-sm-9">
-				<div class="container">
-					{{> yield "shopEditContent"}}
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="container">
+    <h1>{{shop.name}}</h1>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shop-edit-legend">
+          <ul class="nav nav-pills">
+            <li class="{{setActiveClassIf content 'shop-details'}}">
+              <a href="/shops/{{shop.slug}}/shop-details">Shop Details</a>
+            </li>
+            <li class="{{setActiveClassIf content 'items'}}">
+              <a href="/shops/{{shop.slug}}/items">Items</a>
+            </li>
+            <li class="{{setActiveClassIf content 'orders'}}">
+              <a href="/shops/{{shop.slug}}/orders">Orders</a>
+            </li>
+            <li>
+              <a href="{{shopUrl shop.slug}}" target="_blank">View shop</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <div class="container">
+          {{> yield "shopEditContent"}}
+        </div>
+      </div>
+    </div>
+  </div>
 </template>

@@ -1,6 +1,6 @@
-$prefix-webkit:               true !global;
-$prefix-moz:                  true !global;
-$prefix-spec:                 true !global;
+$prefix-webkit: true !global;
+$prefix-moz: true !global;
+$prefix-spec: true !global;
 
 /**
  * Opacity Mixin
@@ -8,22 +8,22 @@ $prefix-spec:                 true !global;
  * @param filter: Bolean [optional]
  */
 @mixin opacity($opacity:50, $filter: true) {
-	opacity: $opacity / 100;
-	@if $filter {
-		filter: alpha(opacity=$opacity);
-	}
+  opacity: $opacity / 100;
+  @if $filter {
+    filter:alpha(opacity=$opacity);
+  }
 }
 
 /**
  * Ellipsis Mixin
  * @param width
  */
- @mixin ellipsis($width: 100%) {
-	display: inline-block;
-	max-width: $width;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+@mixin ellipsis($width: 100%) {
+  display: inline-block;
+  max-width: $width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /**
@@ -34,48 +34,48 @@ $prefix-spec:                 true !global;
  *
  * @example	@include prefixer($property: border-radius, $value: $value);
  */
- @mixin prefixer($property, $value, $prefixes: webkit moz o spec) {
-	@each $prefix in $prefixes {
-		@if $prefix != spec {
-			@if $property == border-top-left-radius and $prefix == moz {
-				@if $prefix-moz {
-					-moz-border-radius-topleft: $value;
-				}
-			} @else if $property == border-top-right-radius and $prefix == moz {
-				@if $prefix-moz {
-					-moz-border-radius-topright: $value;
-				}
-			} @else if $property == border-bottom-right-radius and $prefix == moz {
-				@if $prefix-moz {
-					-moz-border-radius-bottomright: $value;
-				}
-			} @else if $property == border-bottom-left-radius and $prefix == moz {
-				@if $prefix-moz {
-					-moz-border-radius-bottomleft: $value;
-				}
-			} @else {
-				@if $prefix == webkit {
-					@if $prefix-webkit {
-						-webkit-#{$property}: $value;
-					}
-				}
-				@if $prefix == moz {
-					@if $prefix-moz {
-						-moz-#{$property}: $value;
-					}
-				}
-				@if $prefix == o {
-					@if $prefix-moz {
-						-o-#{$property}: $value;
-					}
-				}
-			}
-		} @else {
-			@if $prefix-spec {
-				#{$property}: $value;
-			}
-		}
-	}
+@mixin prefixer($property, $value, $prefixes: webkit moz o spec) {
+  @each $prefix in $prefixes {
+    @if $prefix != spec {
+      @if $property == border-top-left-radius and $prefix == moz {
+        @if $prefix-moz {
+          -moz-border-radius-topleft: $value;
+        }
+      } @else if $property == border-top-right-radius and $prefix == moz {
+        @if $prefix-moz {
+          -moz-border-radius-topright: $value;
+        }
+      } @else if $property == border-bottom-right-radius and $prefix == moz {
+        @if $prefix-moz {
+          -moz-border-radius-bottomright: $value;
+        }
+      } @else if $property == border-bottom-left-radius and $prefix == moz {
+        @if $prefix-moz {
+          -moz-border-radius-bottomleft: $value;
+        }
+      } @else {
+        @if $prefix == webkit {
+          @if $prefix-webkit {
+            -webkit-#{$property}: $value;
+          }
+        }
+        @if $prefix == moz {
+          @if $prefix-moz {
+            -moz-#{$property}: $value;
+          }
+        }
+        @if $prefix == o {
+          @if $prefix-moz {
+            -o-#{$property}: $value;
+          }
+        }
+      }
+    } @else {
+      @if $prefix-spec {
+        #{$property}: $value;
+      }
+    }
+  }
 }
 
 /**
@@ -83,7 +83,7 @@ $prefix-spec:                 true !global;
  * @param value: Can be freeform value like 3px 3px 0 0
  */
 @mixin radius($value) {
-	@include prefixer($property: border-radius, $value: $value);
+  @include prefixer($property: border-radius, $value: $value);
 }
 
 /**
@@ -94,12 +94,12 @@ $prefix-spec:                 true !global;
  *          @include transition-property (transform, opacity);
  */
 @mixin transition ($value...) {
-	@if length($value) >= 1 {
-		@include prefixer($property: transition, $value: $value, $prefixes: webkit moz spec);
-	} @else {
-	$value: all 0.15s ease-in 0s;
-		@include prefixer($property: transition, $value: $value, $prefixes: webkit moz spec);
-	}
+  @if length($value) >= 1 {
+    @include prefixer($property: transition, $value: $value, $prefixes: webkit moz spec);
+  } @else {
+    $value: all 0.15s ease-in 0s;
+    @include prefixer($property: transition, $value: $value, $prefixes: webkit moz spec);
+  }
 }
 
 /**
@@ -107,7 +107,7 @@ $prefix-spec:                 true !global;
  * @param value: Can be free form value inset 0 1px 2px rgba(0, 0, 0, 0.125);
  */
 @mixin box-shadow($value) {
-	@include prefixer($property: box-shadow, $value: $value, $prefixes: webkit moz spec);
+  @include prefixer($property: box-shadow, $value: $value, $prefixes: webkit moz spec);
 }
 
 /**
@@ -115,28 +115,28 @@ $prefix-spec:                 true !global;
  * @param value: Can be freeform value
  */
 @mixin transform($value) {
-	@include prefixer($property: transform, $value: $value);
+  @include prefixer($property: transform, $value: $value);
 }
 
 @mixin gradient-background($direction, $color-stops...) {
-  	background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
-  	background: linear-gradient($direction, $color-stops);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
 }
 
 /**
  * Keyframes mixin
  */
- @mixin keyframes($animationName) {
-     @-webkit-keyframes #{$animationName} {
-         @content;
-     }
-     @-moz-keyframes #{$animationName} {
-         @content;
-     }
-     @-o-keyframes #{$animationName} {
-         @content;
-     }
-     @keyframes #{$animationName} {
-         @content;
-     }
- }
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}

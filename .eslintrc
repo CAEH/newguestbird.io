@@ -1,0 +1,26 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jquery": true,
+    "meteor": true,
+    "mongo": true,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "globals": {
+    "document": true,
+    "navigator": true,
+    "window": true
+  },
+  "rules": {
+    "indent": [1, 2],
+    "linebreak-style": [2, "unix"],
+    "no-console": [0],
+    "no-redeclare": [0],
+    "no-undef": [0],
+    "no-unused-vars": [0],
+    "quotes": [1, "single"],
+    "semi": [2, "always"]
+  }
+}

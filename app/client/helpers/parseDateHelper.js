@@ -3,7 +3,7 @@ Template.registerHelper('parseDate', function (date) {
   var isToday = momentDate.startOf('day').isSame(moment().startOf('day'));
 
   if (isToday) {
-    return 'Today'
+    return 'Today';
   }
   return date;
 });

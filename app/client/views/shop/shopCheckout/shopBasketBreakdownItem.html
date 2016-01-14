@@ -1,20 +1,21 @@
 <template name="shopBasketBreakdownItem">
-	<div class="row">
-		<div class="col-xs-8">
-			<span class="breakdown-item-count-controllers">
-				<button class="count-controller" data-bind="click: addItemCount">
-					<i class="ion-plus-round"></i>
-				</button>
-				<button class="count-controller" data-bind="click: removeItemCount">
-					<i class="ion-minus-round"></i>
-				</button>
-			</span>
-			<span class="breakdown-item-count">{{count}}</span>
-			<span class="breakdown-item-name">{{name}}</span>
-		</div>
-		<div class="col-xs-4 text-right">
-			<span class="breakdown-item-price">{{price}} {{currencySymbol ../shop.shopCurrency}}</span>
-			{{shop}}
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-xs-8">
+      <span class="breakdown-item-count-controllers">
+        <button class="count-controller" data-bind="click: addItemCount">
+          <i class="ion-plus-round"></i>
+        </button>
+        <button class="count-controller" data-bind="click: removeItemCount">
+          <i class="ion-minus-round"></i>
+        </button>
+      </span>
+      <span class="breakdown-item-count">{{count}}</span>
+      <span class="breakdown-item-name">{{name}}</span>
+    </div>
+    <div class="col-xs-4 text-right">
+      <span class="breakdown-item-price">{{price}}
+        {{currencySymbol ../shop.shopCurrency}}</span>
+      {{shop}}
+    </div>
+  </div>
 </template>

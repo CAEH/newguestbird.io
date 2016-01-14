@@ -1,15 +1,17 @@
 <template name="shopBasketView">
-	<div class="basket-content">
-		<h2 class="basket-title">Your Basket</h2>
-		{{#if isSmall}}
-		<p class="basket-sentence">
-			{{{_ "shop-basket.basket-sentence" basketItemsNames}}}
-		</p>
-		{{else}}
-		<div class="basket-breakdown">
-			{{> shopBasketBreakdown}}
-		</div>
-		{{/if}}
-		<a href="checkout"><button class="btn btn-primary checkout-button">{{_ "shop-basket.checkout-button"}}</button></a>
-	</div>
+  <div class="basket-content">
+    <h2 class="basket-title">Your Basket</h2>
+    {{#if isSmall}}
+      <p class="basket-sentence">
+        {{{_ "shop-basket.basket-sentence" basketItemsNames}}}
+      </p>
+      {{else}}
+      <div class="basket-breakdown">
+        {{> shopBasketBreakdown}}
+      </div>
+    {{/if}}
+    <a href="checkout">
+      <button class="btn btn-primary checkout-button">{{_ "shop-basket.checkout-button"}}</button>
+    </a>
+  </div>
 </template>

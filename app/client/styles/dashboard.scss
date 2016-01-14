@@ -2,14 +2,14 @@
 @import "bootstrap/variables";
 
 .dashboard {
-	.dashboard-content {
-		textarea {
-			min-height: 100px;
-			resize: vertical;
-		}
-	}
+  .dashboard-content {
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+  }
 
-	.dashboard-header {
+  .dashboard-header {
     padding-bottom: 20px;
     padding-top: 10px;
     .home {
@@ -25,7 +25,7 @@
         &:hover {
           color: $gray-darker;
         }
-    }
+      }
       &.active a {
         color: $brand-primary;
       }
@@ -36,9 +36,10 @@
   }
   .orders-table {
     .legend-row {
-        background: $gray-lighter;
+      background: $gray-lighter;
     }
-    .order-table-item, .legend-row {
+    .order-table-item,
+    .legend-row {
       padding: 15px 10px;
       border-bottom: 1px solid $gray-light;
     }

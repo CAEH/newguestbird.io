@@ -34,5 +34,5 @@ EnvironmentManager = {
    */
   isProduction: function () {
     return this.isEnvironment('production');
-  },
-}
+  }
+};

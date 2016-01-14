@@ -8,7 +8,11 @@
  * @param orderId {String}}
  */
 Orders.cancelOrder = function (orderId) {
-  Orders.update(orderId, {$set: {status: "canceled"}});
+  Orders.update(orderId, {
+    $set: {
+      status: 'canceled'
+    }
+  });
 };
 
 /**
@@ -16,5 +20,9 @@ Orders.cancelOrder = function (orderId) {
  * @param orderId {String}}
  */
 Orders.confirmOrder = function (orderId) {
-  Orders.update(orderId, {$set: {status: "confirmed"}});
+  Orders.update(orderId, {
+    $set: {
+      status: 'confirmed'
+    }
+  });
 };
