@@ -17,27 +17,7 @@ Router.onAfterAction(function () {
 
 Meteor.subscribe('images');
 
-RoutesMangaer = {
-  defineShopRoutes: function () {
-    Router.map(function () {
-      this.route('shopMain', {
-        path: '/',
-        controller: ShopMainController
-      });
-
-      this.route('shopCheckout', {
-        path: '/checkout',
-        controller: ShopCheckoutController
-      });
-
-      this.route('confirmation', {
-        path: '/confirmation/:basketId',
-        controller: ShopConfirmationController
-      });
-
-    });
-  },
-
+RoutesManager = {
   defineDashboardRoutes: function () {
     Router.map(function () {
       this.route('dashboardMain', {
@@ -79,6 +59,34 @@ RoutesMangaer = {
       this.route('shopEditViewContent', {
         path: '/shops/:shopSlug/:content',
         controller: ShopEditController
+      });
+    });
+  },
+
+  definePublicRoutes: function () {
+    Router.map(function () {
+      this.route('publicHome', {
+        path: '/',
+        controller: PublicHomeController
+      });
+    });
+  },
+
+  defineShopRoutes: function () {
+    Router.map(function () {
+      this.route('shopMain', {
+        path: '/',
+        controller: ShopMainController
+      });
+
+      this.route('shopCheckout', {
+        path: '/checkout',
+        controller: ShopCheckoutController
+      });
+
+      this.route('confirmation', {
+        path: '/confirmation/:basketId',
+        controller: ShopConfirmationController
       });
     });
   }

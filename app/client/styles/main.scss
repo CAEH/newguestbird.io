@@ -1,0 +1,85 @@
+.publicContent {
+  img#mainLogo {
+    width: 290px;
+  }
+
+  input.mc-e-mail {
+    color: initial;
+    line-height: 23px;
+    padding: 5px 10px;
+    width: 300px;
+    font-size: 1.2em;
+    font-weight: 100;
+    text-align: center;
+    border-radius: 50px 10px 10px 50px;
+    border: 1px solid #DA5649;
+  }
+
+  .button.subscribe {
+    border: 1px solid #DA5649;
+    border-radius: 80px;
+    padding: 5px 20px;
+    background: #DA5649;
+    color: white;
+    text-transform: none;
+    text-decoration: none;
+    width: 160px;
+    border-radius: 10px 50px 50px 10px;
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+
+    &:hover {
+      background: #C14337;
+    }
+  }
+
+  .container {
+    text-align: center;
+    position: absolute;
+    color: white;
+    width: 100%;
+    top: 50%;
+    margin-top: -150px;
+
+    &.center {
+      max-width: unset;
+    }
+  }
+
+  .hero {
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('images/common/hero.jpg');
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  .say-hello {
+    font-size: 0.9em;
+    margin-top: 10px;
+    color: #739BCE;
+    font-weight: 100;
+
+    a {
+      color: #DA5649;
+
+      &:hover {
+        text-decoration: underline !important;
+      }
+    }
+  }
+
+  .subtitle {
+    font-size: 35px;
+    margin-bottom: 13px;
+    color: #739BCE;
+    margin-top: 0;
+    font-weight: 100;
+  }
+
+  .updates {
+    margin-top: 30px;
+  }
+}
