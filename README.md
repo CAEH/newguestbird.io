@@ -32,6 +32,7 @@ https://github.com/arunoda/meteor-up
 - Set mup file `cp mup-sample.json mup.json`.
 - Change relevant settings in mup file
 - Configure AWS to let you have access (see wiki)
+- `mup setup` before the first deployment
 - `mup deploy`
 
 NOTE: Never, ever, ever, ever, ever commit `mup.json` to the repo.
